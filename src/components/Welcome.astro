@@ -1,210 +1,759 @@
----
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
----
+<body
+  class="bg-bg-main text-secondary antialiased overflow-x-hidden selection:bg-primary selection:text-white"
+>
+  <div class="grain-overlay"></div>
+  <header
+    class="sticky top-0 z-50 w-full border-b border-border-main bg-bg-main/90 backdrop-blur-sm"
+  >
+    <div class="mx-auto flex w-full items-center justify-between px-6 py-4">
+      <div class="flex items-center gap-2">
+        <div
+          class="w-6 h-6 border-2 border-primary relative flex items-center justify-center"
+        >
+          <div class="w-3 h-3 bg-primary"></div>
+          <div class="absolute -top-1 -right-1 w-1 h-1 bg-primary"></div>
+        </div>
+        <span
+          class="text-xl font-bold tracking-tighter text-secondary font-mono"
+          >paygate.dev</span
+        >
+      </div>
+      <nav class="hidden gap-8 md:flex font-mono text-sm tracking-tight">
+        <a
+          class="text-secondary hover:text-primary hover:underline transition-all decoration-2 underline-offset-4"
+          href="#protocol">$ PROTOCOL</a
+        >
+        <a
+          class="text-secondary hover:text-primary hover:underline transition-all decoration-2 underline-offset-4"
+          href="#how-it-works">$ HOW_IT_WORKS</a
+        >
+        <a
+          class="text-secondary hover:text-primary hover:underline transition-all decoration-2 underline-offset-4"
+          href="#pricing">$ PRICING</a
+        >
+      </nav>
+      <div class="flex items-center gap-4">
+        <a
+          class="hidden text-sm font-mono font-bold text-secondary hover:text-primary sm:block"
+          href="#">LOGIN</a
+        >
+        <button
+          class="bg-primary hover:bg-primary-dark transition-colors text-white text-sm font-mono font-bold h-10 px-6 border border-primary-dark shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none uppercase"
+        >
+          Apply_for_Pilot
+        </button>
+      </div>
+    </div>
+  </header>
 
-<div id="container">
-	<img id="background" src={background.src} alt="" fetchpriority="high" />
-	<main>
-		<section id="hero">
-			<a href="https://astro.build"
-				><img src={astroLogo.src} width="115" height="48" alt="Astro Homepage" /></a
-			>
-			<h1>
-				To get started, open the <code><pre>src/pages</pre></code> directory in your project.
-			</h1>
-			<section id="links">
-				<a class="button" href="https://docs.astro.build">Read our docs</a>
-				<a href="https://astro.build/chat"
-					>Join our Discord <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36"
-						><path
-							fill="currentColor"
-							d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.11 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2a75.57 75.57 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.9-72.15ZM42.45 65.69C36.18 65.69 31 60 31 53s5-12.74 11.43-12.74S54 46 53.89 53s-5.05 12.69-11.44 12.69Zm42.24 0C78.41 65.69 73.25 60 73.25 53s5-12.74 11.44-12.74S96.23 46 96.12 53s-5.04 12.69-11.43 12.69Z"
-						></path></svg
-					>
-				</a>
-			</section>
-		</section>
-	</main>
-
-	<a href="https://astro.build/blog/astro-5/" id="news" class="box">
-		<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"
-			><path
-				d="M24.667 12c1.333 1.414 2 3.192 2 5.334 0 4.62-4.934 5.7-7.334 12C18.444 28.567 18 27.456 18 26c0-4.642 6.667-7.053 6.667-14Zm-5.334-5.333c1.6 1.65 2.4 3.43 2.4 5.333 0 6.602-8.06 7.59-6.4 17.334C13.111 27.787 12 25.564 12 22.666c0-4.434 7.333-8 7.333-16Zm-6-5.333C15.111 3.555 16 5.556 16 7.333c0 8.333-11.333 10.962-5.333 22-3.488-.774-6-4-6-8 0-8.667 8.666-10 8.666-20Z"
-				fill="#111827"></path></svg
-		>
-		<h2>What's New in Astro 5.0?</h2>
-		<p>
-			From content layers to server islands, click to learn more about the new features and
-			improvements in Astro 5.0
-		</p>
-	</a>
-</div>
-
-<style>
-	#background {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		filter: blur(100px);
-	}
-
-	#container {
-		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-		height: 100%;
-	}
-
-	main {
-		height: 100%;
-		display: flex;
-		justify-content: center;
-	}
-
-	#hero {
-		display: flex;
-		align-items: start;
-		flex-direction: column;
-		justify-content: center;
-		padding: 16px;
-	}
-
-	h1 {
-		font-size: 22px;
-		margin-top: 0.25em;
-	}
-
-	#links {
-		display: flex;
-		gap: 16px;
-	}
-
-	#links a {
-		display: flex;
-		align-items: center;
-		padding: 10px 12px;
-		color: #111827;
-		text-decoration: none;
-		transition: color 0.2s;
-	}
-
-	#links a:hover {
-		color: rgb(78, 80, 86);
-	}
-
-	#links a svg {
-		height: 1em;
-		margin-left: 8px;
-	}
-
-	#links a.button {
-		color: white;
-		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
-		box-shadow:
-			inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-			inset 0 -2px 0 rgba(0, 0, 0, 0.24);
-		border-radius: 10px;
-	}
-
-	#links a.button:hover {
-		color: rgb(230, 230, 230);
-		box-shadow: none;
-	}
-
-	pre {
-		font-family:
-			ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono',
-			monospace;
-		font-weight: normal;
-		background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		margin: 0;
-	}
-
-	h2 {
-		margin: 0 0 1em;
-		font-weight: normal;
-		color: #111827;
-		font-size: 20px;
-	}
-
-	p {
-		color: #4b5563;
-		font-size: 16px;
-		line-height: 24px;
-		letter-spacing: -0.006em;
-		margin: 0;
-	}
-
-	code {
-		display: inline-block;
-		background:
-			linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
-			linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
-		border-radius: 8px;
-		border: 1px solid transparent;
-		padding: 6px 8px;
-	}
-
-	.box {
-		padding: 16px;
-		background: rgba(255, 255, 255, 1);
-		border-radius: 16px;
-		border: 1px solid white;
-	}
-
-	#news {
-		position: absolute;
-		bottom: 16px;
-		right: 16px;
-		max-width: 300px;
-		text-decoration: none;
-		transition: background 0.2s;
-		backdrop-filter: blur(50px);
-	}
-
-	#news:hover {
-		background: rgba(255, 255, 255, 0.55);
-	}
-
-	@media screen and (max-height: 368px) {
-		#news {
-			display: none;
-		}
-	}
-
-	@media screen and (max-width: 768px) {
-		#container {
-			display: flex;
-			flex-direction: column;
-		}
-
-		#hero {
-			display: block;
-			padding-top: 10%;
-		}
-
-		#links {
-			flex-wrap: wrap;
-		}
-
-		#links a.button {
-			padding: 14px 18px;
-		}
-
-		#news {
-			right: 16px;
-			left: 16px;
-			bottom: 2.5rem;
-			max-width: 100%;
-		}
-
-		h1 {
-			line-height: 1.5;
-		}
-	}
-</style>
+  <section class="relative bg-grid border-b border-border-main py-20 lg:py-32">
+    <div class="container mx-auto max-w-[1400px] px-6 text-center">
+      <div
+        class="mb-6 font-mono text-primary font-bold tracking-widest text-xs uppercase"
+      >
+        &gt; For 1–10 person B2B software agencies
+      </div>
+      <h1
+        class="text-5xl sm:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tighter text-primary mb-10 mx-auto"
+      >
+        STOP UNPAID <br />
+        WORK. ENFORCE <br />PAYMENTS.
+      </h1>
+      <div class="flex justify-center mb-12">
+        <p
+          class="font-mono text-sm sm:text-base leading-relaxed text-secondary/80 max-w-2xl uppercase tracking-wide border-x-2 border-primary px-8"
+        >
+          // PayGate.dev protects your cashflow by forcing client decisions
+          before work proceeds. Lock your milestones to automatic invoicing and
+          stop bleeding revenue to delayed approvals.
+        </p>
+      </div>
+      <div class="flex flex-col items-center gap-4 mb-20">
+        <button
+          class="group flex items-center justify-center gap-3 bg-primary px-12 py-5 text-lg font-mono font-bold text-white transition-all hover:bg-primary-dark border-2 border-transparent hover:border-black w-full sm:w-auto"
+        >
+          <span>Apply for Pilot Access</span>
+          <div
+            class="flex items-center transition-transform group-hover:translate-x-1"
+          >
+            <div class="w-4 h-0.5 bg-white"></div>
+            <div
+              class="w-2 h-2 border-t-2 border-r-2 border-white rotate-45 -ml-1.5"
+            >
+            </div>
+          </div>
+        </button>
+        <p
+          class="font-mono text-[10px] text-secondary/60 uppercase tracking-wider"
+        >
+          Join 20+ agencies in the closed pilot program
+        </p>
+      </div>
+      <div
+        class="relative w-full max-w-5xl mx-auto grayscale overflow-hidden border border-border-main bg-[#dcdcd9]"
+      >
+        <div class="absolute inset-0 dither-bg opacity-30"></div>
+        <div
+          class="relative w-full flex items-center justify-center p-8 lg:p-20"
+        >
+          <div
+            class="w-full max-w-2xl aspect-[16/9] relative border border-secondary bg-transparent p-6 flex flex-col justify-between font-mono text-[10px]"
+          >
+            <div
+              class="absolute inset-0 pointer-events-none dither-bg opacity-10"
+            >
+            </div>
+            <div class="flex justify-between border-b border-secondary pb-4">
+              <div>SCHEMATIC_REF: PG-HERO-01<br />PROTOCOL: DECISION_GATE</div>
+              <div class="text-right">
+                VERSION: 4.2.0-STABLE<br />TARGET: PROFIT_MARGINS
+              </div>
+            </div>
+            <div
+              class="flex-1 flex flex-col items-center justify-center py-8 relative"
+            >
+              <div
+                class="w-px h-[120%] bg-secondary absolute left-1/2 -translate-x-1/2 opacity-30 border-l border-dashed border-secondary"
+              >
+              </div>
+              <div
+                class="h-px w-[120%] bg-secondary absolute top-1/2 -translate-y-1/2 opacity-30 border-t border-dashed border-secondary"
+              >
+              </div>
+              <div
+                class="relative z-10 w-48 h-48 border border-secondary bg-[#dcdcd9] flex items-center justify-center p-4"
+              >
+                <div
+                  class="w-full h-full border border-secondary border-dashed flex items-center justify-center relative"
+                >
+                  <div
+                    class="absolute top-0 left-0 p-1 border-r border-b border-secondary text-[6px]"
+                  >
+                    A1
+                  </div>
+                  <div
+                    class="w-20 h-20 border-2 border-secondary bg-secondary flex items-center justify-center"
+                  >
+                    <div class="w-12 h-1 bg-[#dcdcd9] my-1"></div>
+                    <div
+                      class="absolute w-10 h-10 border-2 border-[#dcdcd9] flex items-center justify-center"
+                    >
+                      <div class="w-3 h-3 bg-[#dcdcd9]"></div>
+                    </div>
+                  </div>
+                  <div
+                    class="absolute -bottom-2 -right-2 w-4 h-4 bg-secondary flex items-center justify-center"
+                  >
+                    <div class="w-2 h-2 bg-[#dcdcd9]"></div>
+                  </div>
+                </div>
+                <div
+                  class="absolute -top-3 left-6 bg-[#dcdcd9] px-2 text-[8px] font-bold border border-secondary uppercase"
+                >
+                  CASHFLOW_ENFORCER
+                </div>
+              </div>
+            </div>
+            <div class="border-t border-secondary pt-4">
+              <div class="flex justify-between items-center mb-2">
+                <span class="uppercase tracking-widest text-[8px]"
+                  >Enforcement_status</span
+                >
+                <span class="bg-secondary text-white px-2 py-0.5 uppercase"
+                  >Zero_Scope_Creep</span
+                >
+              </div>
+              <div class="w-full h-0.5 bg-secondary/10 relative">
+                <div class="absolute inset-y-0 left-0 w-full bg-secondary">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="border-b border-border-main bg-bg-main" id="protocol">
+    <div class="grid lg:grid-cols-2">
+      <div class="border-r border-border-main bg-[#e2e2df]">
+        <div class="p-12 lg:p-24 w-full max-w-[700px] lg:ml-auto">
+          <div class="mb-12">
+            <h3
+              class="text-4xl font-bold text-secondary mb-4 tracking-tighter uppercase"
+            >
+              Is this your agency?
+            </h3>
+            <div class="h-1 w-20 bg-secondary"></div>
+          </div>
+          <ul class="space-y-8">
+            <li class="group">
+              <h4
+                class="font-mono font-bold text-red-700 mb-2 uppercase flex items-center gap-2"
+              >
+                <div
+                  class="w-3 h-3 border border-red-700 flex items-center justify-center"
+                >
+                  <div class="w-1.5 h-1.5 bg-red-700"></div>
+                </div>
+                Ghosted Milestone Approvals
+              </h4>
+              <p
+                class="text-sm font-mono text-secondary/70 leading-relaxed border-l border-red-700/30 pl-3"
+              >
+                Client "likes" the update but won't click approve, stalling the
+                invoice for weeks.
+              </p>
+            </li>
+            <li class="group">
+              <h4
+                class="font-mono font-bold text-red-700 mb-2 uppercase flex items-center gap-2"
+              >
+                <div
+                  class="w-3 h-3 border border-red-700 flex flex-col justify-center gap-0.5"
+                >
+                  <div class="w-full h-[1px] bg-red-700"></div>
+                  <div class="w-full h-[1px] bg-red-700"></div>
+                </div>
+                The "Quick Favor" Creep
+              </h4>
+              <p
+                class="text-sm font-mono text-secondary/70 leading-relaxed border-l border-red-700/30 pl-3"
+              >
+                Small out-of-scope requests add up to dozens of unpaid hours every
+                single month.
+              </p>
+            </li>
+            <li class="group">
+              <h4
+                class="font-mono font-bold text-red-700 mb-2 uppercase flex items-center gap-2"
+              >
+                <div
+                  class="w-3 h-3 border border-red-700 relative overflow-hidden"
+                >
+                  <div class="absolute -right-1 -top-1 w-2 h-2 bg-red-700"></div>
+                </div>
+                Chasing Decisions via Slack
+              </h4>
+              <p
+                class="text-sm font-mono text-secondary/70 leading-relaxed border-l border-red-700/30 pl-3"
+              >
+                Project stuck because a key decision is buried in a thread instead
+                of being enforced.
+              </p>
+            </li>
+            <li class="group">
+              <h4
+                class="font-mono font-bold text-red-700 mb-2 uppercase flex items-center gap-2"
+              >
+                <div class="w-3 h-3 border border-red-700"></div>
+                Post-Delivery Payment Limbo
+              </h4>
+              <p
+                class="text-sm font-mono text-secondary/70 leading-relaxed border-l border-red-700/30 pl-3"
+              >
+                Work is finished, client has the value, but you're still waiting
+                45 days for the wire.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg-secondary text-bg-main relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 dither-bg"></div>
+        <div class="p-12 lg:p-24 w-full max-w-[700px] lg:mr-auto relative z-10">
+          <div class="mb-12">
+            <h3
+              class="text-4xl font-bold text-white mb-4 tracking-tighter uppercase"
+            >
+              The PayGate Enforcement
+            </h3>
+            <div class="h-1 w-20 bg-primary"></div>
+          </div>
+          <ul class="space-y-8">
+            <li class="group">
+              <h4
+                class="font-mono font-bold text-primary mb-2 uppercase flex items-center gap-2"
+              >
+                <div
+                  class="w-3 h-3 border border-primary flex items-center justify-center"
+                >
+                  <div class="w-1.5 h-1.5 bg-primary"></div>
+                </div>
+                Milestone Hard-Locks
+              </h4>
+              <p
+                class="text-sm font-mono text-gray-400 leading-relaxed border-l border-primary/30 pl-3"
+              >
+                Client MUST approve the current milestone to view the next step.
+                No approval = work stops.
+              </p>
+            </li>
+            <li class="group">
+              <h4
+                class="font-mono font-bold text-primary mb-2 uppercase flex items-center gap-2"
+              >
+                <div
+                  class="w-3 h-3 border border-primary flex flex-col justify-center gap-0.5"
+                >
+                  <div class="w-full h-[1px] bg-primary"></div>
+                  <div class="w-full h-[1px] bg-primary"></div>
+                </div>
+                Approval-Triggered Invoices
+              </h4>
+              <p
+                class="text-sm font-mono text-gray-400 leading-relaxed border-l border-primary/30 pl-3"
+              >
+                The moment they hit "Approve", an invoice is sent. No manual
+                billing, no delay in cashflow.
+              </p>
+            </li>
+            <li class="group">
+              <h4
+                class="font-mono font-bold text-primary mb-2 uppercase flex items-center gap-2"
+              >
+                <div
+                  class="w-3 h-3 border border-primary relative overflow-hidden"
+                >
+                  <div class="absolute -right-1 -top-1 w-2 h-2 bg-primary">
+                  </div>
+                </div>
+                Scope Dispute Protection
+              </h4>
+              <p
+                class="text-sm font-mono text-gray-400 leading-relaxed border-l border-primary/30 pl-3"
+              >
+                Every change and approval is recorded in a legally defensible
+                audit trail. Zero ambiguity.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="border-b border-border-main bg-bg-main" id="how-it-works">
+    <div class="container mx-auto max-w-[1400px]">
+      <div class="grid md:grid-cols-3">
+        <div
+          class="group border-r border-b md:border-b-0 border-border-main p-12 hover:bg-white transition-colors"
+        >
+          <div class="mb-6 font-mono text-primary font-bold">01. DEFINE</div>
+          <h3
+            class="mb-4 text-xl font-bold uppercase tracking-tight text-secondary"
+          >
+            Lock Milestones &amp; Scope
+          </h3>
+          <p class="font-mono text-xs text-secondary/70 leading-relaxed">
+            Set clear deliverables and costs for each phase. PayGate creates the
+            legal and financial guardrails for your project.
+          </p>
+        </div>
+        <div
+          class="group border-r border-b md:border-b-0 border-border-main p-12 hover:bg-white transition-colors"
+        >
+          <div class="mb-6 font-mono text-primary font-bold">02. ENFORCE</div>
+          <h3
+            class="mb-4 text-xl font-bold uppercase tracking-tight text-secondary"
+          >
+            Approve → Invoice Trigger
+          </h3>
+          <p class="font-mono text-xs text-secondary/70 leading-relaxed">
+            Clients can't proceed without formal approval. Approvals
+            automatically trigger Stripe invoices for immediate payment.
+          </p>
+        </div>
+        <div
+          class="group border-border-main p-12 hover:bg-white transition-colors"
+        >
+          <div class="mb-6 font-mono text-primary font-bold">03. SHIP</div>
+          <h3
+            class="mb-4 text-xl font-bold uppercase tracking-tight text-secondary"
+          >
+            No Pay, No Delivery
+          </h3>
+          <p class="font-mono text-xs text-secondary/70 leading-relaxed">
+            The system blocks access to final handovers or repo access until
+            payment is verified. Total control of your intellectual property.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-[#dcdcd9] py-24 border-b border-border-main" id="pricing">
+    <div class="container mx-auto max-w-5xl px-4">
+      <h2
+        class="text-4xl font-black tracking-tighter uppercase mb-12 text-center text-secondary"
+      >
+        Validate Your Cashflow
+      </h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div
+          class="border border-secondary bg-bg-main shadow-[8px_8px_0px_0px_rgba(16,90,56,1)] flex flex-col"
+        >
+          <div class="p-8 border-b border-secondary bg-white">
+            <h3 class="text-2xl font-bold uppercase">Core</h3>
+            <div class="flex items-baseline gap-1 my-4">
+              <span class="text-5xl font-black text-secondary tracking-tighter"
+                >€39</span
+              >
+              <span class="text-sm font-mono text-secondary/60">/mo</span>
+            </div>
+            <p class="text-xs font-mono text-secondary/60 uppercase">
+              Perfect for solo devs &amp; small shops
+            </p>
+          </div>
+          <div class="p-8 flex-1">
+            <ul class="space-y-4 mb-8">
+              <li
+                class="flex items-start gap-3 text-sm font-mono text-secondary"
+              >
+                <div
+                  class="w-4 h-4 border border-primary flex items-center justify-center shrink-0 mt-0.5"
+                >
+                  <div class="w-1.5 h-1.5 bg-primary"></div>
+                </div>
+                Up to 5 active projects
+              </li>
+              <li
+                class="flex items-start gap-3 text-sm font-mono text-secondary"
+              >
+                <div
+                  class="w-4 h-4 border border-primary flex items-center justify-center shrink-0 mt-0.5"
+                >
+                  <div class="w-1.5 h-1.5 bg-primary"></div>
+                </div>
+                Automated Stripe Billing
+              </li>
+              <li
+                class="flex items-start gap-3 text-sm font-mono text-secondary"
+              >
+                <div
+                  class="w-4 h-4 border border-primary flex items-center justify-center shrink-0 mt-0.5"
+                >
+                  <div class="w-1.5 h-1.5 bg-primary"></div>
+                </div>
+                Unlimited Client Seats
+              </li>
+            </ul>
+            <button
+              class="w-full bg-secondary text-white py-4 font-mono font-bold text-sm hover:bg-primary transition-colors uppercase"
+            >
+              Reserve Founder Pricing
+            </button>
+          </div>
+        </div>
+        <div
+          class="border border-secondary bg-bg-main shadow-[8px_8px_0px_0px_rgba(16,90,56,1)] flex flex-col scale-105 z-10"
+        >
+          <div
+            class="p-8 border-b border-secondary bg-primary text-white relative"
+          >
+            <div
+              class="absolute -top-3 right-4 bg-black text-white px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-widest"
+            >
+              BEST VALUE
+            </div>
+            <h3 class="text-2xl font-bold uppercase">Agency</h3>
+            <div class="flex items-baseline gap-1 my-4">
+              <span class="text-5xl font-black tracking-tighter">€69</span>
+              <span class="text-sm font-mono opacity-60">/mo</span>
+            </div>
+            <p class="text-xs font-mono opacity-60 uppercase">
+              For growing agencies (2-10 team members)
+            </p>
+          </div>
+          <div class="p-8 flex-1">
+            <ul class="space-y-4 mb-8">
+              <li
+                class="flex items-start gap-3 text-sm font-mono text-secondary"
+              >
+                <div
+                  class="w-4 h-4 border border-primary flex items-center justify-center shrink-0 mt-0.5"
+                >
+                  <div class="w-1.5 h-1.5 bg-primary"></div>
+                </div>
+                Unlimited active projects
+              </li>
+              <li
+                class="flex items-start gap-3 text-sm font-mono text-secondary"
+              >
+                <div
+                  class="w-4 h-4 border border-primary flex items-center justify-center shrink-0 mt-0.5"
+                >
+                  <div class="w-1.5 h-1.5 bg-primary"></div>
+                </div>
+                Custom legal audit exports
+              </li>
+              <li
+                class="flex items-start gap-3 text-sm font-mono text-secondary"
+              >
+                <div
+                  class="w-4 h-4 border border-primary flex items-center justify-center shrink-0 mt-0.5"
+                >
+                  <div class="w-1.5 h-1.5 bg-primary"></div>
+                </div>
+                Priority Integration Support
+              </li>
+            </ul>
+            <button
+              class="w-full bg-primary text-white py-4 font-mono font-bold text-sm hover:bg-primary-dark transition-colors uppercase"
+            >
+              Join Early Access
+            </button>
+          </div>
+        </div>
+      </div>
+      <p
+        class="text-center mt-12 font-mono text-xs text-secondary/60 uppercase"
+      >
+        Recover the cost in just 1 hour of saved scope creep.
+      </p>
+    </div>
+  </section>
+  <!-- <section
+    class="bg-bg-main py-32 border-b border-border-main relative overflow-hidden"
+  >
+    <div class="absolute inset-0 dither-bg opacity-5 pointer-events-none"></div>
+    <div class="container mx-auto max-w-[1400px] px-6">
+      <div class="relative grid lg:grid-cols-12 gap-0">
+        <div class="lg:col-span-8 relative">
+          <div
+            class="border border-secondary bg-white p-12 lg:p-20 relative z-10"
+          >
+            <div
+              class="absolute top-0 left-0 bg-secondary text-white font-mono text-[10px] px-3 py-1 uppercase tracking-widest"
+            >
+              System_Validator_Feedback
+            </div>
+            <blockquote class="relative">
+              <span
+                class="absolute -top-10 -left-6 text-6xl text-secondary/10 font-black"
+                >"</span
+              >
+              <p
+                class="text-2xl md:text-4xl lg:text-5xl font-black text-secondary leading-[1.1] tracking-tight uppercase"
+              >
+                PayGate didn't just organize us; it stopped our clients from
+                taking advantage of our time. We saw a 28% increase in effective
+                hourly rate simply by enforcing payments.
+              </p>
+              <div
+                class="mt-8 border-t border-secondary/20 pt-4 flex items-center gap-4"
+              >
+                <span
+                  class="font-mono text-[10px] text-primary font-bold uppercase tracking-tighter"
+                  >ROI_CONFIRMED: +€4,200/mo_AVG</span
+                >
+              </div>
+            </blockquote>
+          </div>
+        </div>
+        <div class="lg:col-span-4 mt-8 lg:mt-24 lg:-ml-12 relative z-20">
+          <div
+            class="bg-secondary text-white p-8 border border-white/10 shadow-[20px_20px_0px_0px_rgba(16,90,56,0.2)]"
+          >
+            <div class="mb-6 flex items-center justify-between">
+              <div
+                class="w-12 h-12 border border-white/20 relative flex items-center justify-center"
+              >
+                <div class="w-8 h-8 border border-white/40 border-dashed"></div>
+              </div>
+              <div class="text-right">
+                <div class="text-[8px] font-mono text-white/40 uppercase">
+                  Auth_Level
+                </div>
+                <div
+                  class="text-[10px] font-mono text-primary font-bold uppercase"
+                >
+                  Agency_Owner
+                </div>
+              </div>
+            </div>
+            <div class="space-y-1">
+              <h4 class="text-2xl font-bold tracking-tighter uppercase">
+                Marcus Thorne
+              </h4>
+              <p
+                class="font-mono text-xs text-primary uppercase font-bold tracking-widest"
+              >
+                Founder, Syntax Architecture
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <section class="bg-bg-main py-24 border-b border-border-main">
+    <div class="container mx-auto max-w-4xl px-6">
+      <div
+        class="border-2 border-secondary bg-[#f0f0ee] p-1 md:p-2 relative overflow-hidden"
+      >
+        <div
+          class="border border-secondary/20 p-8 md:p-12 flex flex-col items-center"
+        >
+          <div class="mb-8 w-full">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-4 h-4 bg-primary animate-pulse"></div>
+              <h2
+                class="text-2xl md:text-3xl font-black text-secondary tracking-tighter uppercase font-mono"
+              >
+                SYSTEM_ALERT: COMING_SOON
+              </h2>
+            </div>
+            <div class="h-1 w-full bg-secondary/10 relative">
+              <div class="absolute inset-y-0 left-0 w-1/4 bg-primary"></div>
+            </div>
+          </div>
+          <div class="grid lg:grid-cols-2 gap-12 w-full items-start">
+            <div>
+              <div class="mb-6">
+                <div
+                  class="text-[10px] font-mono text-secondary/40 mb-2 uppercase tracking-widest"
+                >
+                  FOUNDER_BENEFITS
+                </div>
+                <ul class="space-y-3">
+                  <li
+                    class="flex items-center gap-3 font-mono text-xs uppercase font-bold text-secondary"
+                  >
+                    <span class="text-primary tracking-tighter">[LVL_1]</span> 20%
+                    Lifetime discount
+                  </li>
+                  <li
+                    class="flex items-center gap-3 font-mono text-xs uppercase font-bold text-secondary"
+                  >
+                    <span class="text-primary tracking-tighter">[LVL_2]</span> Early
+                    roadmap influence
+                  </li>
+                  <li
+                    class="flex items-center gap-3 font-mono text-xs uppercase font-bold text-secondary"
+                  >
+                    <span class="text-primary tracking-tighter">[LVL_3]</span> Priority
+                    onboarding support
+                  </li>
+                </ul>
+              </div>
+              <p
+                class="font-mono text-[11px] text-secondary/60 leading-relaxed uppercase border-l border-primary/30 pl-3"
+              >
+                The terminal is being prepared for final deployment. Subscribe
+                to the update bulletin to receive your discount code and
+                priority invitation.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div class="relative">
+                <div
+                  class="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-[10px] text-secondary/30 uppercase"
+                >
+                  EMAIL_INPUT:
+                </div>
+                <input
+                  class="w-full bg-transparent border-2 border-secondary p-5 pl-28 font-mono text-sm focus:ring-0 focus:border-primary placeholder:text-secondary/20 uppercase"
+                  placeholder="ADMIN@AGENCY.COM"
+                  type="email"
+                />
+              </div>
+              <button
+                class="bg-secondary text-white py-4 px-8 font-mono font-bold text-sm border border-secondary shadow-[4px_4px_0px_0px_rgba(16,90,56,1)] hover:bg-primary transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none uppercase"
+              >
+                SUBSCRIBE_TO_UPDATE
+              </button>
+              <div class="flex justify-between items-center opacity-30">
+                <div class="text-[8px] font-mono uppercase">
+                  Status: Waiting_Sync
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-secondary text-white pt-16 pb-12">
+    <div class="container mx-auto max-w-[1400px] px-6">
+      <div class="grid gap-12 lg:grid-cols-4 border-b border-white/10 pb-12">
+        <div class="col-span-1 lg:col-span-1">
+          <div class="flex items-center gap-2 mb-4">
+            <div
+              class="w-5 h-5 border-2 border-primary relative flex items-center justify-center"
+            >
+              <div class="w-2 h-2 bg-primary"></div>
+            </div>
+            <span class="text-lg font-bold font-mono tracking-tight"
+              >PayGate.dev</span
+            >
+          </div>
+          <p class="font-mono text-xs text-gray-400 mb-6 max-w-[200px]">
+            Decision enforcement for 1–10 person B2B software agencies.
+          </p>
+        </div>
+        <div class="col-span-1">
+          <h4
+            class="font-mono font-bold text-primary mb-4 text-xs uppercase tracking-widest"
+          >
+            Protocol
+          </h4>
+          <ul class="space-y-2 text-sm font-mono text-gray-400">
+            <li>
+              <a
+                class="hover:text-white hover:underline decoration-primary decoration-2 underline-offset-4"
+                href="#">Features</a>
+            </li>
+            <li>
+              <a
+                class="hover:text-white hover:underline decoration-primary decoration-2 underline-offset-4"
+                href="#">Pricing</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-1">
+          <h4
+            class="font-mono font-bold text-primary mb-4 text-xs uppercase tracking-widest"
+          >
+            Founder Portal
+          </h4>
+          <ul class="space-y-2 text-sm font-mono text-gray-400">
+            <li>
+              <a
+                class="hover:text-white hover:underline decoration-primary decoration-2 underline-offset-4"
+                href="#">Apply for Pilot</a>
+            </li>
+            <li>
+              <a
+                class="hover:text-white hover:underline decoration-primary decoration-2 underline-offset-4"
+                href="#">Early Access</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-1">
+          <h4
+            class="font-mono font-bold text-primary mb-4 text-xs uppercase tracking-widest"
+          >
+            Legal
+          </h4>
+          <ul class="space-y-2 text-sm font-mono text-gray-400">
+            <li>
+              <a
+                class="hover:text-white hover:underline decoration-primary decoration-2 underline-offset-4"
+                href="#">Terms of Service</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="mt-8 flex flex-col md:flex-row justify-between items-center text-xs font-mono text-gray-500"
+      >
+        <div>© 2024 PayGate.dev. Market Validation Cycle Alpha-01.</div>
+        <div class="mt-4 md:mt-0 flex gap-4">
+         <!--  <span
+            >SYSTEM STATUS: <span class="text-green-500 font-bold uppercase"
+              >Operational</span
+            ></span
+          > -->
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
