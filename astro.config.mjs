@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://astronaut.github.io/font-panda',
+  site: 'https://david587.github.io',
   vite: {
     plugins: [tailwindcss()],
   },
