@@ -1,755 +1,1964 @@
-  <div class="grain-overlay"></div>
-  <header
-    class="sticky top-0 z-50 w-full border-b border-border-main bg-bg-main/90 backdrop-blur-sm"
-  >
-    <div class="mx-auto flex w-full items-center justify-between px-6 py-4">
-      <div class="flex items-center gap-2">
-        <div
-          class="w-6 h-6 border-2 border-primary relative flex items-center justify-center"
-        >
-          <div class="w-3 h-3 bg-primary"></div>
-          <div class="absolute -top-1 -right-1 w-1 h-1 bg-primary"></div>
-        </div>
-        <span
-          class="text-xl font-bold tracking-tighter text-secondary font-mono"
-          >paygate.dev</span
-        >
-      </div>
-      <nav class="hidden gap-8 md:flex font-mono text-sm tracking-tight">
-        <a
-          class="text-secondary hover:text-primary hover:underline transition-all decoration-2 underline-offset-4"
-          href="#protocol">$ PROTOCOL</a
-        >
-        <a
-          class="text-secondary hover:text-primary hover:underline transition-all decoration-2 underline-offset-4"
-          href="#how-it-works">$ HOW_IT_WORKS</a
-        >
-        <a
-          class="text-secondary hover:text-primary hover:underline transition-all decoration-2 underline-offset-4"
-          href="#pricing">$ PRICING</a
-        >
-      </nav>
-      <div class="flex items-center gap-4">
-        <a
-          class="hidden text-sm font-mono font-bold text-secondary hover:text-primary sm:block"
-          href="#">LOGIN</a
-        >
-        <button
-          class="bg-primary hover:bg-primary-dark transition-colors text-white text-sm font-mono font-bold h-10 px-6 border border-primary-dark shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none uppercase"
-        >
-          Apply_for_Pilot
-        </button>
-      </div>
-    </div>
-  </header>
+---
+import { Image } from "astro:assets";
+import frontpanda from "../assets/frontpanda.png";
+import mini from "../assets/mini.png";
+---
 
-  <section class="relative bg-grid border-b border-border-main py-20 lg:py-32">
-    <div class="container mx-auto max-w-[1400px] px-6 text-center">
-      <div
-        class="mb-6 font-mono text-primary font-bold tracking-widest text-xs uppercase"
-      >
-        &gt; For 1–10 person B2B software agencies
-      </div>
-      <h1
-        class="text-5xl sm:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tighter text-primary mb-10 mx-auto"
-      >
-        STOP UNPAID <br />
-        WORK. ENFORCE <br />PAYMENTS.
-      </h1>
-      <div class="flex justify-center mb-12">
-        <p
-          class="font-mono text-sm sm:text-base leading-relaxed text-secondary/80 max-w-2xl uppercase tracking-wide border-x-2 border-primary px-8"
-        >
-          // PayGate.dev protects your cashflow by forcing client decisions
-          before work proceeds. Lock your milestones to automatic invoicing and
-          stop bleeding revenue to delayed approvals.
-        </p>
-      </div>
-      <div class="flex flex-col items-center gap-4 mb-20">
-        <button
-          class="group flex items-center justify-center gap-3 bg-primary px-12 py-5 text-lg font-mono font-bold text-white transition-all hover:bg-primary-dark border-2 border-transparent hover:border-black w-full sm:w-auto"
-        >
-          <span>Apply for Pilot Access</span>
-          <div
-            class="flex items-center transition-transform group-hover:translate-x-1"
-          >
-            <div class="w-4 h-0.5 bg-white"></div>
-            <div
-              class="w-2 h-2 border-t-2 border-r-2 border-white rotate-45 -ml-1.5"
-            >
-            </div>
-          </div>
-        </button>
-        <p
-          class="font-mono text-[10px] text-secondary/60 uppercase tracking-wider"
-        >
-          Join 20+ agencies in the closed pilot program
-        </p>
-      </div>
-      <div
-        class="relative w-full max-w-5xl mx-auto grayscale overflow-hidden border border-border-main bg-[#dcdcd9]"
-      >
-        <div class="absolute inset-0 dither-bg opacity-30"></div>
-        <div
-          class="relative w-full flex items-center justify-center p-8 lg:p-20"
-        >
-          <div
-            class="w-full max-w-2xl aspect-[16/9] relative border border-secondary bg-transparent p-6 flex flex-col justify-between font-mono text-[10px]"
-          >
-            <div
-              class="absolute inset-0 pointer-events-none dither-bg opacity-10"
-            >
-            </div>
-            <div class="flex justify-between border-b border-secondary pb-4">
-              <div>SCHEMATIC_REF: PG-HERO-01<br />PROTOCOL: DECISION_GATE</div>
-              <div class="text-right">
-                VERSION: 4.2.0-STABLE<br />TARGET: PROFIT_MARGINS
-              </div>
-            </div>
-            <div
-              class="flex-1 flex flex-col items-center justify-center py-8 relative"
-            >
-              <div
-                class="w-px h-[120%] bg-secondary absolute left-1/2 -translate-x-1/2 opacity-30 border-l border-dashed border-secondary"
-              >
-              </div>
-              <div
-                class="h-px w-[120%] bg-secondary absolute top-1/2 -translate-y-1/2 opacity-30 border-t border-dashed border-secondary"
-              >
-              </div>
-              <div
-                class="relative z-10 w-48 h-48 border border-secondary bg-[#dcdcd9] flex items-center justify-center p-4"
-              >
-                <div
-                  class="w-full h-full border border-secondary border-dashed flex items-center justify-center relative"
-                >
-                  <div
-                    class="absolute top-0 left-0 p-1 border-r border-b border-secondary text-[6px]"
-                  >
-                    A1
-                  </div>
-                  <div
-                    class="w-20 h-20 border-2 border-secondary bg-secondary flex items-center justify-center"
-                  >
-                    <div class="w-12 h-1 bg-[#dcdcd9] my-1"></div>
-                    <div
-                      class="absolute w-10 h-10 border-2 border-[#dcdcd9] flex items-center justify-center"
-                    >
-                      <div class="w-3 h-3 bg-[#dcdcd9]"></div>
-                    </div>
-                  </div>
-                  <div
-                    class="absolute -bottom-2 -right-2 w-4 h-4 bg-secondary flex items-center justify-center"
-                  >
-                    <div class="w-2 h-2 bg-[#dcdcd9]"></div>
-                  </div>
-                </div>
-                <div
-                  class="absolute -top-3 left-6 bg-[#dcdcd9] px-2 text-[8px] font-bold border border-secondary uppercase"
-                >
-                  CASHFLOW_ENFORCER
-                </div>
-              </div>
-            </div>
-            <div class="border-t border-secondary pt-4">
-              <div class="flex justify-between items-center mb-2">
-                <span class="uppercase tracking-widest text-[8px]"
-                  >Enforcement_status</span
-                >
-                <span class="bg-secondary text-white px-2 py-0.5 uppercase"
-                  >Zero_Scope_Creep</span
-                >
-              </div>
-              <div class="w-full h-0.5 bg-secondary/10 relative">
-                <div class="absolute inset-y-0 left-0 w-full bg-secondary">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="grain-overlay"></div>
+<header
+  class="sticky top-0 z-50 w-full border-b border-border-main bg-bg-main/90 backdrop-blur-sm"
+>
+  <div class="mx-auto flex w-full items-center justify-between px-6 py-4">
+    <div class="flex items-center gap-2">
+      <Image src={frontpanda} alt="Frontpanda" class="h-8 w-auto" />
     </div>
-  </section>
-  <section class="border-b border-border-main bg-bg-main" id="protocol">
-    <div class="grid lg:grid-cols-2">
-      <div class="border-r border-border-main bg-[#e2e2df]">
-        <div class="p-12 lg:p-24 w-full max-w-[700px] lg:ml-auto">
-          <div class="mb-12">
-            <h3
-              class="text-4xl font-bold text-secondary mb-4 tracking-tighter uppercase"
-            >
-              Is this your agency?
-            </h3>
-            <div class="h-1 w-20 bg-secondary"></div>
-          </div>
-          <ul class="space-y-8">
-            <li class="group">
-              <h4
-                class="font-mono font-bold text-red-700 mb-2 uppercase flex items-center gap-2"
-              >
-                <div
-                  class="w-3 h-3 border border-red-700 flex items-center justify-center"
-                >
-                  <div class="w-1.5 h-1.5 bg-red-700"></div>
-                </div>
-                Ghosted Milestone Approvals
-              </h4>
-              <p
-                class="text-sm font-mono text-secondary/70 leading-relaxed border-l border-red-700/30 pl-3"
-              >
-                Client "likes" the update but won't click approve, stalling the
-                invoice for weeks.
-              </p>
-            </li>
-            <li class="group">
-              <h4
-                class="font-mono font-bold text-red-700 mb-2 uppercase flex items-center gap-2"
-              >
-                <div
-                  class="w-3 h-3 border border-red-700 flex flex-col justify-center gap-0.5"
-                >
-                  <div class="w-full h-[1px] bg-red-700"></div>
-                  <div class="w-full h-[1px] bg-red-700"></div>
-                </div>
-                The "Quick Favor" Creep
-              </h4>
-              <p
-                class="text-sm font-mono text-secondary/70 leading-relaxed border-l border-red-700/30 pl-3"
-              >
-                Small out-of-scope requests add up to dozens of unpaid hours every
-                single month.
-              </p>
-            </li>
-            <li class="group">
-              <h4
-                class="font-mono font-bold text-red-700 mb-2 uppercase flex items-center gap-2"
-              >
-                <div
-                  class="w-3 h-3 border border-red-700 relative overflow-hidden"
-                >
-                  <div class="absolute -right-1 -top-1 w-2 h-2 bg-red-700"></div>
-                </div>
-                Chasing Decisions via Slack
-              </h4>
-              <p
-                class="text-sm font-mono text-secondary/70 leading-relaxed border-l border-red-700/30 pl-3"
-              >
-                Project stuck because a key decision is buried in a thread instead
-                of being enforced.
-              </p>
-            </li>
-            <li class="group">
-              <h4
-                class="font-mono font-bold text-red-700 mb-2 uppercase flex items-center gap-2"
-              >
-                <div class="w-3 h-3 border border-red-700"></div>
-                Post-Delivery Payment Limbo
-              </h4>
-              <p
-                class="text-sm font-mono text-secondary/70 leading-relaxed border-l border-red-700/30 pl-3"
-              >
-                Work is finished, client has the value, but you're still waiting
-                45 days for the wire.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="bg-secondary text-bg-main relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10 dither-bg"></div>
-        <div class="p-12 lg:p-24 w-full max-w-[700px] lg:mr-auto relative z-10">
-          <div class="mb-12">
-            <h3
-              class="text-4xl font-bold text-white mb-4 tracking-tighter uppercase"
-            >
-              The PayGate Enforcement
-            </h3>
-            <div class="h-1 w-20 bg-primary"></div>
-          </div>
-          <ul class="space-y-8">
-            <li class="group">
-              <h4
-                class="font-mono font-bold text-primary mb-2 uppercase flex items-center gap-2"
-              >
-                <div
-                  class="w-3 h-3 border border-primary flex items-center justify-center"
-                >
-                  <div class="w-1.5 h-1.5 bg-primary"></div>
-                </div>
-                Milestone Hard-Locks
-              </h4>
-              <p
-                class="text-sm font-mono text-gray-400 leading-relaxed border-l border-primary/30 pl-3"
-              >
-                Client MUST approve the current milestone to view the next step.
-                No approval = work stops.
-              </p>
-            </li>
-            <li class="group">
-              <h4
-                class="font-mono font-bold text-primary mb-2 uppercase flex items-center gap-2"
-              >
-                <div
-                  class="w-3 h-3 border border-primary flex flex-col justify-center gap-0.5"
-                >
-                  <div class="w-full h-[1px] bg-primary"></div>
-                  <div class="w-full h-[1px] bg-primary"></div>
-                </div>
-                Approval-Triggered Invoices
-              </h4>
-              <p
-                class="text-sm font-mono text-gray-400 leading-relaxed border-l border-primary/30 pl-3"
-              >
-                The moment they hit "Approve", an invoice is sent. No manual
-                billing, no delay in cashflow.
-              </p>
-            </li>
-            <li class="group">
-              <h4
-                class="font-mono font-bold text-primary mb-2 uppercase flex items-center gap-2"
-              >
-                <div
-                  class="w-3 h-3 border border-primary relative overflow-hidden"
-                >
-                  <div class="absolute -right-1 -top-1 w-2 h-2 bg-primary">
-                  </div>
-                </div>
-                Scope Dispute Protection
-              </h4>
-              <p
-                class="text-sm font-mono text-gray-400 leading-relaxed border-l border-primary/30 pl-3"
-              >
-                Every change and approval is recorded in a legally defensible
-                audit trail. Zero ambiguity.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="border-b border-border-main bg-bg-main" id="how-it-works">
-    <div class="container mx-auto max-w-[1400px]">
-      <div class="grid md:grid-cols-3">
-        <div
-          class="group border-r border-b md:border-b-0 border-border-main p-12 hover:bg-white transition-colors"
-        >
-          <div class="mb-6 font-mono text-primary font-bold">01. DEFINE</div>
-          <h3
-            class="mb-4 text-xl font-bold uppercase tracking-tight text-secondary"
-          >
-            Lock Milestones &amp; Scope
-          </h3>
-          <p class="font-mono text-xs text-secondary/70 leading-relaxed">
-            Set clear deliverables and costs for each phase. PayGate creates the
-            legal and financial guardrails for your project.
-          </p>
-        </div>
-        <div
-          class="group border-r border-b md:border-b-0 border-border-main p-12 hover:bg-white transition-colors"
-        >
-          <div class="mb-6 font-mono text-primary font-bold">02. ENFORCE</div>
-          <h3
-            class="mb-4 text-xl font-bold uppercase tracking-tight text-secondary"
-          >
-            Approve → Invoice Trigger
-          </h3>
-          <p class="font-mono text-xs text-secondary/70 leading-relaxed">
-            Clients can't proceed without formal approval. Approvals
-            automatically trigger Stripe invoices for immediate payment.
-          </p>
-        </div>
-        <div
-          class="group border-border-main p-12 hover:bg-white transition-colors"
-        >
-          <div class="mb-6 font-mono text-primary font-bold">03. SHIP</div>
-          <h3
-            class="mb-4 text-xl font-bold uppercase tracking-tight text-secondary"
-          >
-            No Pay, No Delivery
-          </h3>
-          <p class="font-mono text-xs text-secondary/70 leading-relaxed">
-            The system blocks access to final handovers or repo access until
-            payment is verified. Total control of your intellectual property.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="bg-[#dcdcd9] py-24 border-b border-border-main" id="pricing">
-    <div class="container mx-auto max-w-5xl px-4">
-      <h2
-        class="text-4xl font-black tracking-tighter uppercase mb-12 text-center text-secondary"
+    <nav class="hidden gap-8 md:flex font-mono text-sm tracking-tight">
+      <a
+        class="text-secondary hover:text-primary hover:underline transition-all decoration-2 underline-offset-4"
+        href="#protocol">$ PROTOCOL</a
       >
-        Validate Your Cashflow
-      </h2>
-      <div class="grid md:grid-cols-2 gap-8">
+      <a
+        class="text-secondary hover:text-primary hover:underline transition-all decoration-2 underline-offset-4"
+        href="#how-it-works">$ HOW_IT_WORKS</a
+      >
+      <a
+        class="text-secondary hover:text-primary hover:underline transition-all decoration-2 underline-offset-4"
+        href="#pricing">$ PRICING</a
+      >
+    </nav>
+    <div class="flex items-center gap-4">
+      <button
+        id="header-cta"
+        class="bg-primary hover:bg-primary-dark transition-colors text-white text-sm font-mono font-bold h-10 px-6 border border-primary-dark shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none uppercase"
+      >
+        Apply for Pilot Access
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="relative bg-grid border-b border-border-main py-20 lg:py-32">
+  <div class="container mx-auto max-w-[1400px] px-6 text-center">
+    <div
+      class="mb-6 font-mono text-primary font-bold tracking-widest text-xs uppercase"
+    >
+      &gt; For 1–10 person EU custom software agencies
+    </div>
+    <h1
+      class="text-5xl sm:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tighter text-primary mb-10 mx-auto"
+    >
+      ENFORCE DECISIONS.
+      <br />
+      <span class="text-black">
+        APPROVE → INVOICE. <br />PAY → UNLOCK.
+      </span>
+    </h1>
+    <div class="flex justify-center mb-12">
+      <p class="font-mono text-sm sm:text-base leading-relaxed text-secondary/80 max-w-2xl uppercase tracking-wide border-x-2 border-primary px-8 text-left whitespace-pre-line">
+      /*
+        Frontpanda is not project management. It is a decision enforcement layer.
+        Approve → Invoice finalized.
+        Request change → becomes a priced change order (cost + ETA).
+        Handover unlocks on payment confirmation.
+      */
+      </p>
+
+    </div>
+    <div class="flex flex-col items-center gap-4 mb-20">
+      <button
+        id="hero-cta"
+        class="group flex items-center justify-center gap-3 bg-primary px-12 py-5 text-lg font-mono font-bold text-white transition-all hover:bg-primary-dark border-2 border-transparent hover:border-black w-full sm:w-auto"
+      >
+        <span>Apply for Pilot Access</span>
         <div
-          class="border border-secondary bg-bg-main shadow-[8px_8px_0px_0px_rgba(16,90,56,1)] flex flex-col"
+          class="flex items-center transition-transform group-hover:translate-x-1"
         >
-          <div class="p-8 border-b border-secondary bg-white">
-            <h3 class="text-2xl font-bold uppercase">Core</h3>
-            <div class="flex items-baseline gap-1 my-4">
-              <span class="text-5xl font-black text-secondary tracking-tighter"
-                >€39</span
-              >
-              <span class="text-sm font-mono text-secondary/60">/mo</span>
-            </div>
-            <p class="text-xs font-mono text-secondary/60 uppercase">
-              Perfect for solo devs &amp; small shops
-            </p>
-          </div>
-          <div class="p-8 flex-1">
-            <ul class="space-y-4 mb-8">
-              <li
-                class="flex items-start gap-3 text-sm font-mono text-secondary"
-              >
-                <div
-                  class="w-4 h-4 border border-primary flex items-center justify-center shrink-0 mt-0.5"
-                >
-                  <div class="w-1.5 h-1.5 bg-primary"></div>
-                </div>
-                Up to 5 active projects
-              </li>
-              <li
-                class="flex items-start gap-3 text-sm font-mono text-secondary"
-              >
-                <div
-                  class="w-4 h-4 border border-primary flex items-center justify-center shrink-0 mt-0.5"
-                >
-                  <div class="w-1.5 h-1.5 bg-primary"></div>
-                </div>
-                Automated Stripe Billing
-              </li>
-              <li
-                class="flex items-start gap-3 text-sm font-mono text-secondary"
-              >
-                <div
-                  class="w-4 h-4 border border-primary flex items-center justify-center shrink-0 mt-0.5"
-                >
-                  <div class="w-1.5 h-1.5 bg-primary"></div>
-                </div>
-                Unlimited Client Seats
-              </li>
-            </ul>
-            <button
-              class="w-full bg-secondary text-white py-4 font-mono font-bold text-sm hover:bg-primary transition-colors uppercase"
-            >
-              Reserve Founder Pricing
-            </button>
-          </div>
-        </div>
-        <div
-          class="border border-secondary bg-bg-main shadow-[8px_8px_0px_0px_rgba(16,90,56,1)] flex flex-col scale-105 z-10"
-        >
+          <div class="w-4 h-0.5 bg-white"></div>
           <div
-            class="p-8 border-b border-secondary bg-primary text-white relative"
+            class="w-2 h-2 border-t-2 border-r-2 border-white rotate-45 -ml-1.5"
           >
-            <div
-              class="absolute -top-3 right-4 bg-black text-white px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-widest"
-            >
-              BEST VALUE
-            </div>
-            <h3 class="text-2xl font-bold uppercase">Agency</h3>
-            <div class="flex items-baseline gap-1 my-4">
-              <span class="text-5xl font-black tracking-tighter">€69</span>
-              <span class="text-sm font-mono opacity-60">/mo</span>
-            </div>
-            <p class="text-xs font-mono opacity-60 uppercase">
-              For growing agencies (2-10 team members)
-            </p>
-          </div>
-          <div class="p-8 flex-1">
-            <ul class="space-y-4 mb-8">
-              <li
-                class="flex items-start gap-3 text-sm font-mono text-secondary"
-              >
-                <div
-                  class="w-4 h-4 border border-primary flex items-center justify-center shrink-0 mt-0.5"
-                >
-                  <div class="w-1.5 h-1.5 bg-primary"></div>
-                </div>
-                Unlimited active projects
-              </li>
-              <li
-                class="flex items-start gap-3 text-sm font-mono text-secondary"
-              >
-                <div
-                  class="w-4 h-4 border border-primary flex items-center justify-center shrink-0 mt-0.5"
-                >
-                  <div class="w-1.5 h-1.5 bg-primary"></div>
-                </div>
-                Custom legal audit exports
-              </li>
-              <li
-                class="flex items-start gap-3 text-sm font-mono text-secondary"
-              >
-                <div
-                  class="w-4 h-4 border border-primary flex items-center justify-center shrink-0 mt-0.5"
-                >
-                  <div class="w-1.5 h-1.5 bg-primary"></div>
-                </div>
-                Priority Integration Support
-              </li>
-            </ul>
-            <button
-              class="w-full bg-primary text-white py-4 font-mono font-bold text-sm hover:bg-primary-dark transition-colors uppercase"
-            >
-              Join Early Access
-            </button>
           </div>
         </div>
-      </div>
+      </button>
       <p
-        class="text-center mt-12 font-mono text-xs text-secondary/60 uppercase"
+        class="font-mono text-[10px] text-secondary/60 uppercase tracking-widest"
       >
-        Recover the cost in just 1 hour of saved scope creep.
+        2–3 minute application. We reply by email.
       </p>
     </div>
-  </section>
-  <!-- <section
-    class="bg-bg-main py-32 border-b border-border-main relative overflow-hidden"
-  >
-    <div class="absolute inset-0 dither-bg opacity-5 pointer-events-none"></div>
-    <div class="container mx-auto max-w-[1400px] px-6">
-      <div class="relative grid lg:grid-cols-12 gap-0">
-        <div class="lg:col-span-8 relative">
+    <div
+      class="relative w-full max-w-5xl mx-auto grayscale overflow-hidden border border-border-main bg-[#dcdcd9]"
+    >
+      <div class="absolute inset-0 dither-bg opacity-30"></div>
+
+      <!-- Tab Navigation -->
+      <div
+        class="relative z-10 flex border-b border-border-main bg-white/50 font-mono text-[10px] font-bold uppercase tracking-widest"
+      >
+        <button
+          id="tab-a-btn"
+          class="flex-1 py-4 px-2 border-r border-border-main bg-white text-primary transition-colors"
+        >
+          01. Pending Approval / Blocked
+        </button>
+        <button
+          id="tab-b-btn"
+          class="flex-1 py-4 px-2 hover:bg-white/80 transition-colors text-secondary/60"
+        >
+          02. Invoice Issued / Awaiting Payment
+        </button>
+        <button
+          id="tab-c-btn"
+          class="flex-1 py-4 px-2 hover:bg-white/80 transition-colors text-secondary/60"
+        >
+          03. Paid / Unlocked
+        </button>
+      </div>
+
+      <div
+        class="relative w-full flex flex-col items-center justify-center p-6 lg:p-12"
+      >
+        <!-- Product Preview Mock -->
+        <div
+          class="w-full max-w-3xl bg-white border border-secondary shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] font-mono p-4 sm:p-8"
+        >
+          <!-- Header -->
           <div
-            class="border border-secondary bg-white p-12 lg:p-20 relative z-10"
+            class="flex justify-between items-start mb-8 border-b border-secondary/20 pb-4"
           >
-            <div
-              class="absolute top-0 left-0 bg-secondary text-white font-mono text-[10px] px-3 py-1 uppercase tracking-widest"
-            >
-              System_Validator_Feedback
-            </div>
-            <blockquote class="relative">
-              <span
-                class="absolute -top-10 -left-6 text-6xl text-secondary/10 font-black"
-                >"</span
-              >
-              <p
-                class="text-2xl md:text-4xl lg:text-5xl font-black text-secondary leading-[1.1] tracking-tight uppercase"
-              >
-                PayGate didn't just organize us; it stopped our clients from
-                taking advantage of our time. We saw a 28% increase in effective
-                hourly rate simply by enforcing payments.
-              </p>
+            <div>
               <div
-                class="mt-8 border-t border-secondary/20 pt-4 flex items-center gap-4"
+                class="text-[8px] text-secondary/60 uppercase mb-1 tracking-widest"
               >
-                <span
-                  class="font-mono text-[10px] text-primary font-bold uppercase tracking-tighter"
-                  >ROI_CONFIRMED: +€4,200/mo_AVG</span
-                >
+                Project: Nebula_Ecom_v2
               </div>
-            </blockquote>
-          </div>
-        </div>
-        <div class="lg:col-span-4 mt-8 lg:mt-24 lg:-ml-12 relative z-20">
-          <div
-            class="bg-secondary text-white p-8 border border-white/10 shadow-[20px_20px_0px_0px_rgba(16,90,56,0.2)]"
-          >
-            <div class="mb-6 flex items-center justify-between">
-              <div
-                class="w-12 h-12 border border-white/20 relative flex items-center justify-center"
+              <h4
+                class="text-lg font-bold text-secondary uppercase tracking-tighter"
               >
-                <div class="w-8 h-8 border border-white/40 border-dashed"></div>
-              </div>
-              <div class="text-right">
-                <div class="text-[8px] font-mono text-white/40 uppercase">
-                  Auth_Level
-                </div>
-                <div
-                  class="text-[10px] font-mono text-primary font-bold uppercase"
-                >
-                  Agency_Owner
-                </div>
-              </div>
-            </div>
-            <div class="space-y-1">
-              <h4 class="text-2xl font-bold tracking-tighter uppercase">
-                Marcus Thorne
+                Milestone 04: Checkout_Flow
               </h4>
-              <p
-                class="font-mono text-xs text-primary uppercase font-bold tracking-widest"
+            </div>
+            <div class="text-right">
+              <div
+                class="text-[8px] text-secondary/60 uppercase mb-1 tracking-widest"
               >
-                Founder, Syntax Architecture
-              </p>
+                Amount
+              </div>
+              <div class="text-lg font-bold text-secondary tracking-tighter">
+                €4,250.00
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab A Content: Pending/Blocked -->
+          <div id="tab-a-content" class="space-y-6">
+            <div
+              class="border-2 border-secondary p-4 sm:p-6 relative bg-bg-main/50"
+            >
+              <div
+                class="absolute -top-3 left-4 bg-secondary text-white px-2 py-0.5 text-[8px] uppercase font-bold tracking-widest"
+              >
+                Status: Pending Approval
+              </div>
+
+              <div
+                class="flex flex-col sm:flex-row justify-between items-center gap-6"
+              >
+                <div class="flex-1">
+                  <p
+                    class="text-[10px] sm:text-xs text-secondary/80 leading-relaxed mb-4 uppercase"
+                  >
+                    Acceptance criteria: Stripe integration tested, error states
+                    handled, mobile responsive layout verified.
+                  </p>
+                  <div
+                    class="inline-flex items-center gap-2 bg-red-100 border border-red-700 text-red-700 px-3 py-1 text-[9px] font-bold uppercase animate-pulse"
+                  >
+                    <div class="w-2 h-2 bg-red-700 rounded-full"></div>
+                    Awaiting client approval
+                  </div>
+                </div>
+
+                <div class="flex flex-col gap-2 w-full sm:w-auto">
+                  <button
+                    class="bg-primary text-white px-6 py-2 font-bold uppercase text-[10px] border border-primary-dark shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
+                  >
+                    Approve → Issue Invoice
+                  </button>
+                  <button
+                    class="bg-white text-secondary px-6 py-2 font-bold uppercase text-[10px] border border-secondary shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
+                  >
+                    Request Change
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="text-[9px] text-secondary/40 uppercase text-center italic"
+            >
+              // Approval triggers invoice finalization. Payment confirmation
+              unlocks handover.
+            </div>
+          </div>
+
+          <!-- Tab B Content: Invoice Issued / Awaiting Payment -->
+          <div id="tab-b-content" class="hidden space-y-6">
+            <div
+              class="border-2 border-primary p-4 sm:p-6 relative bg-primary/5"
+            >
+              <div
+                class="absolute -top-3 left-4 bg-primary text-white px-2 py-0.5 text-[8px] uppercase font-bold tracking-widest"
+              >
+                Status: Invoice Issued
+              </div>
+
+              <div
+                class="flex flex-col sm:flex-row justify-between items-center gap-6"
+              >
+                <div class="flex-1">
+                  <div class="flex items-center gap-3 mb-2">
+                    <span class="text-sm font-bold text-secondary uppercase"
+                      >Invoice #INV-2026-004</span
+                    >
+                    <span
+                      class="bg-secondary/10 text-secondary text-[8px] px-2 py-0.5 font-bold uppercase tracking-widest border border-secondary/20"
+                      >Awaiting Payment</span
+                    >
+                  </div>
+                  <p
+                    class="text-[10px] text-secondary/60 leading-relaxed uppercase"
+                  >
+                    Finalized: Feb 04, 2026. Handover pack locked until payment
+                    confirmation.
+                  </p>
+                </div>
+
+                <div class="flex flex-col gap-2 w-full sm:w-auto">
+                  <button
+                    class="bg-primary text-white px-6 py-2 font-bold uppercase text-[10px] border border-primary-dark shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
+                  >
+                    Pay Invoice
+                  </button>
+                  <button
+                    class="bg-white text-secondary px-6 py-2 font-bold uppercase text-[10px] border border-secondary shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
+                  >
+                    View Invoice
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="text-[9px] text-secondary/40 uppercase text-center italic"
+            >
+              // Work pauses until change orders are accepted or invoice is
+              paid.
+            </div>
+          </div>
+
+          <!-- Tab C Content: Paid / Unlocked -->
+          <div id="tab-c-content" class="hidden space-y-6">
+            <div
+              class="border-2 border-green-700/30 p-4 sm:p-6 relative bg-green-50/50"
+            >
+              <div
+                class="absolute -top-3 left-4 bg-green-700 text-white px-2 py-0.5 text-[8px] uppercase font-bold tracking-widest"
+              >
+                Status: Paid
+              </div>
+
+              <div
+                class="flex flex-col sm:flex-row justify-between items-center gap-6"
+              >
+                <div class="flex-1">
+                  <div class="flex items-center gap-3 mb-2">
+                    <span class="text-sm font-bold text-secondary uppercase"
+                      >Milestone Complete</span
+                    >
+                    <span
+                      class="bg-green-100 text-green-700 text-[8px] px-2 py-0.5 font-bold uppercase tracking-widest border border-green-700/20"
+                      >Handover Unlocked</span
+                    >
+                  </div>
+                  <p
+                    class="text-[10px] text-secondary/60 leading-relaxed uppercase"
+                  >
+                    Payment confirmed. All deliverables and handover assets are
+                    now accessible.
+                  </p>
+                </div>
+
+                <div class="flex flex-col gap-2 w-full sm:w-auto">
+                  <button
+                    class="bg-primary text-white px-6 py-2 font-bold uppercase text-[10px] border border-primary-dark shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all"
+                  >
+                    Download Pack
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section> -->
-  <section class="bg-bg-main py-24 border-b border-border-main">
-    <div class="container mx-auto max-w-4xl px-6">
+  </div>
+</section>
+
+<div class="bg-white border-b border-border-main py-6 overflow-hidden">
+  <div class="container mx-auto max-w-[1400px] px-6">
+    <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+      <div class="flex items-center gap-2">
+        <div class="w-2 h-2 bg-primary"></div>
+        <span
+          class="font-mono text-[10px] font-bold uppercase tracking-widest text-secondary"
+          >Designed for EU agencies</span
+        >
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="w-2 h-2 bg-primary"></div>
+        <span
+          class="font-mono text-[10px] font-bold uppercase tracking-widest text-secondary"
+          >Works with Stripe invoices</span
+        >
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="w-2 h-2 bg-primary"></div>
+        <span
+          class="font-mono text-[10px] font-bold uppercase tracking-widest text-secondary"
+          >No source code stored</span
+        >
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="w-2 h-2 bg-primary"></div>
+        <span
+          class="font-mono text-[10px] font-bold uppercase tracking-widest text-secondary"
+          >No files uploaded</span
+        >
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="w-2 h-2 bg-primary"></div>
+        <span
+          class="font-mono text-[10px] font-bold uppercase tracking-widest text-secondary"
+          >We only store decisions, timestamps, and billing references (Stripe
+          Customer ID + Invoice ID)</span
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="border-b border-border-main bg-bg-main" id="protocol">
+  <div class="grid lg:grid-cols-2">
+    <div class="border-r border-border-main bg-[#f0f0ee]">
+      <div class="p-12 lg:p-24 w-full max-w-[700px] lg:ml-auto">
+        <div class="mb-12">
+          <h3
+            class="text-4xl font-bold text-secondary mb-4 tracking-tighter uppercase"
+          >
+            Is this your agency?
+          </h3>
+          <div class="h-1 w-20 bg-secondary"></div>
+        </div>
+        <ul class="space-y-8">
+          <li class="group">
+            <h4
+              class="font-mono font-bold text-red-700 mb-2 uppercase flex items-center gap-2"
+            >
+              <div
+                class="w-3 h-3 border border-red-700 flex items-center justify-center"
+              >
+                <div class="w-1.5 h-1.5 bg-red-700"></div>
+              </div>
+              Ghosted Milestone Approvals
+            </h4>
+            <p
+              class="text-sm font-mono text-secondary/70 leading-relaxed border-l border-red-700/30 pl-3"
+            >
+              Work is done. The client goes silent. The invoice can’t be sent.
+              Cashflow stalls.
+            </p>
+          </li>
+          <li class="group">
+            <h4
+              class="font-mono font-bold text-red-700 mb-2 uppercase flex items-center gap-2"
+            >
+              <div
+                class="w-3 h-3 border border-red-700 flex flex-col justify-center gap-0.5"
+              >
+                <div class="w-full h-[1px] bg-red-700"></div>
+                <div class="w-full h-[1px] bg-red-700"></div>
+              </div>
+              The "Quick Favor" Creep
+            </h4>
+            <p
+              class="text-sm font-mono text-secondary/70 leading-relaxed border-l border-red-700/30 pl-3"
+            >
+              Small out-of-scope requests add up to dozens of unpaid hours every
+              single month.
+            </p>
+          </li>
+          <li class="group">
+            <h4
+              class="font-mono font-bold text-red-700 mb-2 uppercase flex items-center gap-2"
+            >
+              <div
+                class="w-3 h-3 border border-red-700 relative overflow-hidden"
+              >
+                <div class="absolute -right-1 -top-1 w-2 h-2 bg-red-700"></div>
+              </div>
+              Chasing Decisions via Slack
+            </h4>
+            <p
+              class="text-sm font-mono text-secondary/70 leading-relaxed border-l border-red-700/30 pl-3"
+            >
+              Project stuck because a key decision is buried in a thread instead
+              of being enforced.
+            </p>
+          </li>
+          <li class="group">
+            <h4
+              class="font-mono font-bold text-red-700 mb-2 uppercase flex items-center gap-2"
+            >
+              <div class="w-3 h-3 border border-red-700"></div>
+              Post-Delivery Payment Limbo
+            </h4>
+            <p
+              class="text-sm font-mono text-secondary/70 leading-relaxed border-l border-red-700/30 pl-3"
+            >
+              Work is delivered. Value is realized. Payment sits in someone’s
+              approval queue.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="bg-secondary text-bg-main relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10 dither-bg"></div>
+      <div class="p-12 lg:p-24 w-full max-w-[700px] lg:mr-auto relative z-10">
+        <div class="mb-12">
+          <h3
+            class="text-4xl font-bold text-white mb-4 tracking-tighter uppercase"
+          >
+            The Frontpanda Enforcement
+          </h3>
+          <div class="h-1 w-20 bg-primary"></div>
+        </div>
+        <ul class="space-y-8">
+          <li class="group">
+            <h4
+              class="font-mono font-bold text-primary mb-2 uppercase flex items-center gap-2"
+            >
+              <div
+                class="w-3 h-3 border border-primary flex items-center justify-center"
+              >
+                <div class="w-1.5 h-1.5 bg-primary"></div>
+              </div>
+              Milestone Decision Gate
+            </h4>
+            <p
+              class="text-sm font-mono text-gray-400 leading-relaxed border-l border-primary/30 pl-3"
+            >
+              Clients can only: Approve or Request change. Approvals lock
+              milestone scope. Changes become priced change orders.
+            </p>
+          </li>
+          <li class="group">
+            <h4
+              class="font-mono font-bold text-primary mb-2 uppercase flex items-center gap-2"
+            >
+              <div
+                class="w-3 h-3 border border-primary flex flex-col justify-center gap-0.5"
+              >
+                <div class="w-full h-[1px] bg-primary"></div>
+                <div class="w-full h-[1px] bg-primary"></div>
+              </div>
+              Approval-Triggered Billing
+            </h4>
+            <p
+              class="text-sm font-mono text-gray-400 leading-relaxed border-l border-primary/30 pl-3"
+            >
+              Approve triggers invoice finalization via Stripe. No manual
+              billing, no waiting for the next billing cycle.
+            </p>
+          </li>
+          <li class="group">
+            <h4
+              class="font-mono font-bold text-primary mb-2 uppercase flex items-center gap-2"
+            >
+              <div
+                class="w-3 h-3 border border-primary relative overflow-hidden"
+              >
+                <div
+                  class="absolute -right-1 -top-1 w-2 h-2 border border-primary flex items-center justify-center"
+                >
+                  <div class="w-1 h-1 bg-primary"></div>
+                </div>
+              </div>
+              Priced Change Orders
+            </h4>
+            <p
+              class="text-sm font-mono text-gray-400 leading-relaxed border-l border-primary/30 pl-3"
+            >
+              Out-of-scope requests become priced change orders with fixed cost
+              and ETA. Must be accepted before work resumes.
+            </p>
+          </li>
+          <li class="group">
+            <h4
+              class="font-mono font-bold text-primary mb-2 uppercase flex items-center gap-2"
+            >
+              <div
+                class="w-3 h-3 border border-primary relative overflow-hidden"
+              >
+                <div class="absolute -right-1 -top-1 w-2 h-2 bg-primary"></div>
+              </div>
+              Audit Trail Export
+            </h4>
+            <p
+              class="text-sm font-mono text-gray-400 leading-relaxed border-l border-primary/30 pl-3"
+            >
+              Every decision, change request, and payment is logged in a
+              dispute-ready export (PDF + CSV). Your paper trail is automated.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section
+  class="border-b border-border-main bg-white py-20 lg:py-32 overflow-hidden relative"
+>
+  
+
+  <div class="container mx-auto max-w-[1400px] px-6 text-center relative z-10">
+    <div class="mb-16 flex flex-col items-center justify-center gap-4">
+      <h3 class="text-5xl font-black text-secondary tracking-tighter uppercase">
+        Not a PM tool.
+      </h3>
+      <div class="h-1 w-20 bg-red-700"></div>
+    </div>
+
+    <div
+      class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-20 max-w-6xl mx-auto"
+    >
       <div
-        class="border-2 border-secondary bg-[#f0f0ee] p-1 md:p-2 relative overflow-hidden"
+        class="aspect-square border-4 border-red-700 flex flex-col items-center justify-center p-4 rotate-[-2deg] bg-white shadow-[8px_8px_0px_0px_rgba(185,28,28,0.1)]"
       >
         <div
-          class="border border-secondary/20 p-8 md:p-12 flex flex-col items-center"
+          class="w-12 h-12 border-2 border-red-700 flex items-center justify-center mb-4 relative"
         >
-          <div class="mb-8 w-full">
-            <div class="flex items-center gap-3 mb-4">
-              <div class="w-4 h-4 bg-primary animate-pulse"></div>
-              <h2
-                class="text-2xl md:text-3xl font-black text-secondary tracking-tighter uppercase font-mono"
-              >
-                SYSTEM_ALERT: COMING_SOON
-              </h2>
+          <div class="w-8 h-[2px] bg-red-700 rotate-45 absolute"></div>
+          <div class="w-8 h-[2px] bg-red-700 -rotate-45 absolute"></div>
+        </div>
+        <span
+          class="font-mono font-black text-red-700 uppercase text-xl md:text-2xl tracking-tighter"
+          >NO CHAT</span
+        >
+      </div>
+
+      <div
+        class="aspect-square border-4 border-red-700 flex flex-col items-center justify-center p-4 rotate-[3deg] bg-white shadow-[8px_8px_0px_0px_rgba(185,28,28,0.1)]"
+      >
+        <div
+          class="w-12 h-12 border-2 border-red-700 flex items-center justify-center mb-4 relative"
+        >
+          <div class="w-8 h-[2px] bg-red-700 rotate-45 absolute"></div>
+          <div class="w-8 h-[2px] bg-red-700 -rotate-45 absolute"></div>
+        </div>
+        <span
+          class="font-mono font-black text-red-700 uppercase text-xl md:text-2xl tracking-tighter"
+          >NO TASKS</span
+        >
+      </div>
+
+      <div
+        class="aspect-square border-4 border-red-700 flex flex-col items-center justify-center p-4 rotate-[-1deg] bg-white shadow-[8px_8px_0px_0px_rgba(185,28,28,0.1)]"
+      >
+        <div
+          class="w-12 h-12 border-2 border-red-700 flex items-center justify-center mb-4 relative"
+        >
+          <div class="w-8 h-[2px] bg-red-700 rotate-45 absolute"></div>
+          <div class="w-8 h-[2px] bg-red-700 -rotate-45 absolute"></div>
+        </div>
+        <span
+          class="font-mono font-black text-red-700 uppercase text-xs md:text-sm leading-tight tracking-tighter"
+          >NO "WE'LL DISCUSS LATER"</span
+        >
+      </div>
+
+      <div
+        class="aspect-square border-4 border-primary flex flex-col items-center justify-center p-4 rotate-[2deg] bg-white shadow-[8px_8px_0px_0px_rgba(16,90,56,0.1)]"
+      >
+        <div
+          class="w-12 h-12 border-2 border-primary flex items-center justify-center mb-4 relative"
+        >
+          <div class="w-6 h-6 bg-primary"></div>
+        </div>
+        <span
+          class="font-mono font-black text-primary uppercase text-xl md:text-2xl tracking-tighter"
+          >ONLY DECISIONS</span
+        >
+      </div>
+    </div>
+
+    <div class="inline-block border-2 border-primary px-8 py-4 bg-primary/5">
+      <p
+        class="font-mono text-sm md:text-base font-bold text-primary uppercase tracking-widest"
+      >
+        Only decisions. Only paid changes. Always exportable.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="border-b border-border-main bg-[#e2e2df] py-16 lg:py-24">
+  <div class="container mx-auto max-w-[1400px] px-6">
+    <div class="mb-16 text-center">
+      <h3
+        class="text-4xl font-black text-secondary tracking-tighter uppercase mb-4"
+      >
+        Why clients accept this
+      </h3>
+      <div class="h-1 w-20 bg-primary mx-auto"></div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-20">
+      <div
+        class="bg-white border-2 border-secondary p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden group hover:-translate-y-1 transition-transform"
+      >
+        <div
+          class="absolute -top-4 -right-4 w-12 h-12 border border-secondary/10 rotate-12 group-hover:rotate-45 transition-transform"
+        >
+        </div>
+        <h4
+          class="font-mono font-bold text-secondary mb-4 uppercase text-lg flex items-center gap-2"
+        >
+          <div class="w-2 h-2 bg-primary"></div>
+          Clarity on Progress
+        </h4>
+        <p
+          class="font-mono text-xs text-secondary/70 leading-relaxed uppercase"
+        >
+          Clients always know exactly what they are approving and what it costs.
+          No more ambiguity on "what's next" or hidden fees.
+        </p>
+      </div>
+
+      <div
+        class="bg-white border-2 border-secondary p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden group hover:-translate-y-1 transition-transform"
+      >
+        <div
+          class="absolute -top-4 -right-4 w-12 h-12 border border-secondary/10 rotate-12 group-hover:rotate-45 transition-transform"
+        >
+        </div>
+        <h4
+          class="font-mono font-bold text-secondary mb-4 uppercase text-lg flex items-center gap-2"
+        >
+          <div class="w-2 h-2 bg-primary"></div>
+          Faster Delivery
+        </h4>
+        <p
+          class="font-mono text-xs text-secondary/70 leading-relaxed uppercase"
+        >
+          Eliminating "Slack-based" decision making removes approval
+          bottlenecks. Projects move forward only when both parties are in sync.
+        </p>
+      </div>
+
+      <div
+        class="bg-white border-2 border-secondary p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden group hover:-translate-y-1 transition-transform"
+      >
+        <div
+          class="absolute -top-4 -right-4 w-12 h-12 border border-secondary/10 rotate-12 group-hover:rotate-45 transition-transform"
+        >
+        </div>
+        <h4
+          class="font-mono font-bold text-secondary mb-4 uppercase text-lg flex items-center gap-2"
+        >
+          <div class="w-2 h-2 bg-primary"></div>
+          Fair Scope
+        </h4>
+        <p
+          class="font-mono text-xs text-secondary/70 leading-relaxed uppercase"
+        >
+          Change requests are handled professionally with clear pricing and
+          updated ETAs, not awkward "quick favor" negotiations.
+        </p>
+      </div>
+    </div>
+
+    <!-- Client View Micro-Mock -->
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-8">
+        <span
+          class="font-mono text-[10px] font-bold uppercase tracking-widest text-secondary/40"
+          >Micro-Mock: The Client Experience</span
+        >
+      </div>
+      <div
+        class="bg-[#f0f0ee] border border-secondary/30 p-4 sm:p-8 font-mono relative"
+      >
+        <div class="absolute top-2 left-2 w-1 h-1 bg-secondary/20"></div>
+        <div class="absolute top-2 right-2 w-1 h-1 bg-secondary/20"></div>
+        <div class="absolute bottom-2 left-2 w-1 h-1 bg-secondary/20"></div>
+        <div class="absolute bottom-2 right-2 w-1 h-1 bg-secondary/20"></div>
+
+        <div
+          class="flex flex-col sm:flex-row justify-between items-start gap-6 border-b border-secondary/10 pb-6 mb-6"
+        >
+          <div>
+            <div
+              class="text-[8px] text-secondary/40 uppercase mb-1 tracking-widest"
+            >
+              New Change Order
             </div>
-            <div class="h-1 w-full bg-secondary/10 relative">
-              <div class="absolute inset-y-0 left-0 w-1/4 bg-primary"></div>
+            <h5 class="text-sm font-bold text-secondary uppercase">
+              “Add Apple Pay + domain verification + QA"
+            </h5>
+          </div>
+          <div class="text-right">
+            <div
+              class="text-[8px] text-secondary/40 uppercase mb-1 tracking-widest"
+            >
+              Cost + ETA
+            </div>
+            <div class="text-sm font-bold text-primary uppercase">
+              €650 / +3–5 days
             </div>
           </div>
-          <div class="grid lg:grid-cols-2 gap-12 w-full items-start">
-            <div>
-              <div class="mb-6">
-                <div
-                  class="text-[10px] font-mono text-secondary/40 mb-2 uppercase tracking-widest"
-                >
-                  FOUNDER_BENEFITS
-                </div>
-                <ul class="space-y-3">
-                  <li
-                    class="flex items-center gap-3 font-mono text-xs uppercase font-bold text-secondary"
-                  >
-                    <span class="text-primary tracking-tighter">[LVL_1]</span> 20%
-                    Lifetime discount
-                  </li>
-                  <li
-                    class="flex items-center gap-3 font-mono text-xs uppercase font-bold text-secondary"
-                  >
-                    <span class="text-primary tracking-tighter">[LVL_2]</span> Early
-                    roadmap influence
-                  </li>
-                  <li
-                    class="flex items-center gap-3 font-mono text-xs uppercase font-bold text-secondary"
-                  >
-                    <span class="text-primary tracking-tighter">[LVL_3]</span> Priority
-                    onboarding support
-                  </li>
-                </ul>
-              </div>
-              <p
-                class="font-mono text-[11px] text-secondary/60 leading-relaxed uppercase border-l border-primary/30 pl-3"
-              >
-                The terminal is being prepared for final deployment. Subscribe
-                to the update bulletin to receive your discount code and
-                priority invitation.
-              </p>
-            </div>
-            <div class="flex flex-col gap-4">
-              <div class="relative">
-                <div
-                  class="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-[10px] text-secondary/30 uppercase"
-                >
-                  EMAIL_INPUT:
-                </div>
-                <input
-                  class="w-full bg-transparent border-2 border-secondary p-5 pl-28 font-mono text-sm focus:ring-0 focus:border-primary placeholder:text-secondary/20 uppercase"
-                  placeholder="ADMIN@AGENCY.COM"
-                  type="email"
-                />
-              </div>
-              <button
-                class="bg-secondary text-white py-4 px-8 font-mono font-bold text-sm border border-secondary shadow-[4px_4px_0px_0px_rgba(16,90,56,1)] hover:bg-primary transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none uppercase"
-              >
-                SUBSCRIBE_TO_UPDATE
-              </button>
-              <div class="flex justify-between items-center opacity-30">
-                <div class="text-[8px] font-mono uppercase">
-                  Status: Waiting_Sync
-                </div>
-              </div>
-            </div>
+        </div>
+
+        <div class="flex gap-3 justify-end items-center">
+          <div
+            class="text-[9px] text-secondary/60 uppercase flex items-center mr-auto"
+          >
+            // Work pauses until accepted
           </div>
+          <button
+            class="px-4 py-2 border border-secondary text-[10px] font-bold uppercase hover:bg-white transition-colors"
+            >Request Change</button
+          >
+          <button
+            class="px-4 py-2 bg-secondary text-white text-[10px] font-bold uppercase hover:bg-black transition-colors shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+            >Approve → Issue Invoice</button
+          >
         </div>
       </div>
     </div>
-  </section>
-  <footer class="bg-secondary text-white pt-16 pb-12">
-    <div class="container mx-auto max-w-[1400px] px-6">
-      <div class="grid gap-12 lg:grid-cols-4 border-b border-white/10 pb-12">
-        <div class="col-span-1 lg:col-span-1">
-          <div class="flex items-center gap-2 mb-4">
-            <div
-              class="w-5 h-5 border-2 border-primary relative flex items-center justify-center"
+  </div>
+</section>
+
+<section class="border-b border-border-main bg-[#f0f0ee]" id="how-it-works">
+  <div class="container mx-auto max-w-[1400px]">
+    <div class="grid md:grid-cols-3">
+      <div
+        class="group border-r border-b md:border-b-0 border-border-main p-12 bg-[#f0f0ee] "
+      >
+        <div class="mb-6 font-mono text-primary font-bold">01. DEFINE</div>
+        <h3
+          class="mb-4 text-xl font-bold uppercase tracking-tight text-secondary"
+        >
+          Define Milestones + Acceptance Criteria
+        </h3>
+        <p class="font-mono text-xs text-secondary/70 leading-relaxed">
+          Set deliverables, acceptance criteria, and price per milestone. Scope
+          is professional and clear.
+        </p>
+      </div>
+      <div
+        class="group border-r border-b md:border-b-0 border-border-main p-12 bg-[#f0f0ee] "
+      >
+        <div class="mb-6 font-mono text-primary font-bold">02. ENFORCE</div>
+        <h3
+          class="mb-4 text-xl font-bold uppercase tracking-tight text-secondary"
+        >
+          Approve → Invoice (Automatic)
+        </h3>
+        <p class="font-mono text-xs text-secondary/70 leading-relaxed">
+          Approvals trigger billing automatically via Stripe. Handover remains
+          locked until payment is confirmed.
+        </p>
+      </div>
+      <div
+        class="group bg-[#f0f0ee] border-border-main p-12 "
+      >
+        <div class="mb-6 font-mono text-primary font-bold">03. UNLOCK</div>
+        <h3
+          class="mb-4 text-xl font-bold uppercase tracking-tight text-secondary"
+        >
+          Unlock Handover Pack After Payment
+        </h3>
+        <p class="font-mono text-xs text-secondary/70 leading-relaxed">
+          Automatically release the Handover Pack once payment is confirmed via
+          Stripe webhooks. Includes repo invites and assets.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-[#dcdcd9] py-24 border-b border-border-main" id="pricing">
+  <div class="container mx-auto max-w-5xl px-4">
+    <h2
+      class="text-4xl font-black tracking-tighter uppercase mb-12 text-center text-secondary"
+    >
+      Validate Your Cashflow
+    </h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div
+        class="border border-secondary bg-bg-main shadow-[8px_8px_0px_0px_rgba(16,90,56,1)] flex flex-col"
+      >
+        <div class="p-8 border-b border-secondary bg-white">
+          <h3 class="text-2xl font-bold uppercase">Core</h3>
+          <div class="flex items-baseline gap-1 my-4">
+            <span class="text-5xl font-black text-secondary tracking-tighter"
+              >€39</span
             >
-              <div class="w-2 h-2 bg-primary"></div>
-            </div>
-            <span class="text-lg font-bold font-mono tracking-tight"
-              >PayGate.dev</span
-            >
+            <span class="text-sm font-mono text-secondary/60">/mo</span>
           </div>
-          <p class="font-mono text-xs text-gray-400 mb-6 max-w-[200px]">
-            Decision enforcement for 1–10 person B2B software agencies.
+          <p class="text-xs font-mono text-secondary/60 uppercase">
+            Perfect for solo devs &amp; small shops
           </p>
         </div>
-        <div class="col-span-1">
-          <h4
-            class="font-mono font-bold text-primary mb-4 text-xs uppercase tracking-widest"
-          >
-            Protocol
-          </h4>
-          <ul class="space-y-2 text-sm font-mono text-gray-400">
-            <li>
-              <a
-                class="hover:text-white hover:underline decoration-primary decoration-2 underline-offset-4"
-                href="#">Features</a>
+        <div class="p-8 flex-1">
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start gap-3 text-sm font-mono text-secondary">
+              <div
+                class="w-4 h-4 border border-primary flex items-center justify-center shrink-0 mt-0.5"
+              >
+                <div class="w-1.5 h-1.5 bg-primary"></div>
+              </div>
+              Up to 5 active projects
             </li>
-            <li>
-              <a
-                class="hover:text-white hover:underline decoration-primary decoration-2 underline-offset-4"
-                href="#">Pricing</a>
+            <li class="flex items-start gap-3 text-sm font-mono text-secondary">
+              <div
+                class="w-4 h-4 border border-primary flex items-center justify-center shrink-0 mt-0.5"
+              >
+                <div class="w-1.5 h-1.5 bg-primary"></div>
+              </div>
+              Milestone approvals + decision gate
+            </li>
+            <li class="flex items-start gap-3 text-sm font-mono text-secondary">
+              <div
+                class="w-4 h-4 border border-primary flex items-center justify-center shrink-0 mt-0.5"
+              >
+                <div class="w-1.5 h-1.5 bg-primary"></div>
+              </div>
+              Change request quotes
+            </li>
+            <li class="flex items-start gap-3 text-sm font-mono text-secondary">
+              <div
+                class="w-4 h-4 border border-primary flex items-center justify-center shrink-0 mt-0.5"
+              >
+                <div class="w-1.5 h-1.5 bg-primary"></div>
+              </div>
+              Stripe invoicing trigger
+            </li>
+            <li class="flex items-start gap-3 text-sm font-mono text-secondary">
+              <div
+                class="w-4 h-4 border border-primary flex items-center justify-center shrink-0 mt-0.5"
+              >
+                <div class="w-1.5 h-1.5 bg-primary"></div>
+              </div>
+              Unlimited client seats
+            </li>
+            <li class="flex items-start gap-3 text-sm font-mono text-secondary">
+              <div
+                class="w-4 h-4 border border-primary flex items-center justify-center shrink-0 mt-0.5"
+              >
+                <div class="w-1.5 h-1.5 bg-primary"></div>
+              </div>
+              Basic audit export
             </li>
           </ul>
-        </div>
-        <div class="col-span-1">
-          <h4
-            class="font-mono font-bold text-primary mb-4 text-xs uppercase tracking-widest"
+          <button
+            class="w-full bg-secondary text-white py-4 font-mono font-bold text-sm hover:bg-primary transition-colors uppercase"
           >
-            Founder Portal
-          </h4>
-          <ul class="space-y-2 text-sm font-mono text-gray-400">
-            <li>
-              <a
-                class="hover:text-white hover:underline decoration-primary decoration-2 underline-offset-4"
-                href="#">Apply for Pilot</a>
-            </li>
-            <li>
-              <a
-                class="hover:text-white hover:underline decoration-primary decoration-2 underline-offset-4"
-                href="#">Early Access</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-span-1">
-          <h4
-            class="font-mono font-bold text-primary mb-4 text-xs uppercase tracking-widest"
-          >
-            Legal
-          </h4>
-          <ul class="space-y-2 text-sm font-mono text-gray-400">
-            <li>
-              <a
-                class="hover:text-white hover:underline decoration-primary decoration-2 underline-offset-4"
-                href="#">Terms of Service</a>
-            </li>
-          </ul>
+            Apply for Pilot Access
+          </button>
         </div>
       </div>
       <div
-        class="mt-8 flex flex-col md:flex-row justify-between items-center text-xs font-mono text-gray-500"
+        class="border border-secondary bg-bg-main shadow-[8px_8px_0px_0px_rgba(16,90,56,1)] flex flex-col scale-105 z-10"
       >
-        <div>© 2024 PayGate.dev. Market Validation Cycle Alpha-01.</div>
-        <div class="mt-4 md:mt-0 flex gap-4">
-         <!--  <span
-            >SYSTEM STATUS: <span class="text-green-500 font-bold uppercase"
-              >Operational</span
-            ></span
-          > -->
+        <div
+          class="p-8 border-b border-secondary bg-primary text-white relative"
+        >
+          <div
+            class="absolute -top-3 right-4 bg-black text-white px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-widest"
+          >
+            BEST VALUE
+          </div>
+          <h3 class="text-2xl font-bold uppercase">Agency</h3>
+          <div class="flex items-baseline gap-1 my-4">
+            <span class="text-5xl font-black tracking-tighter">€69</span>
+            <span class="text-sm font-mono opacity-60">/mo</span>
+          </div>
+          <p class="text-xs font-mono opacity-60 uppercase">
+            For growing agencies (2-10 team members)
+          </p>
+        </div>
+        <div class="p-8 flex-1">
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start gap-3 text-sm font-mono text-secondary">
+              <div
+                class="w-4 h-4 border border-primary flex items-center justify-center shrink-0 mt-0.5"
+              >
+                <div class="w-1.5 h-1.5 bg-primary"></div>
+              </div>
+              Unlimited active projects
+            </li>
+            <li class="flex items-start gap-3 text-sm font-mono text-secondary">
+              <div
+                class="w-4 h-4 border border-primary flex items-center justify-center shrink-0 mt-0.5"
+              >
+                <div class="w-1.5 h-1.5 bg-primary"></div>
+              </div>
+              Team roles
+            </li>
+            <li class="flex items-start gap-3 text-sm font-mono text-secondary">
+              <div
+                class="w-4 h-4 border border-primary flex items-center justify-center shrink-0 mt-0.5"
+              >
+                <div class="w-1.5 h-1.5 bg-primary"></div>
+              </div>
+              Advanced audit exports (PDF pack)
+            </li>
+            <li class="flex items-start gap-3 text-sm font-mono text-secondary">
+              <div
+                class="w-4 h-4 border border-primary flex items-center justify-center shrink-0 mt-0.5"
+              >
+                <div class="w-1.5 h-1.5 bg-primary"></div>
+              </div>
+              Priority onboarding
+            </li>
+          </ul>
+          <button
+            class="w-full bg-primary text-white py-4 font-mono font-bold text-sm hover:bg-primary-dark transition-colors uppercase"
+          >
+            Apply for Pilot Access
+          </button>
         </div>
       </div>
     </div>
-  </footer>
+    <p class="text-center mt-12 font-mono text-xs text-secondary/60 uppercase">
+      Pays for itself the first time a client delays approval or tries a “quick
+      favor”.
+    </p>
+  </div>
+</section>
+
+<section class="bg-white py-24 border-b border-border-main">
+  <div class="container mx-auto max-w-4xl px-6">
+    <div
+      class="mb-12 flex flex-col sm:flex-row justify-between items-center gap-6"
+    >
+      <div class="text-left">
+        <h3
+          class="text-4xl font-black text-secondary tracking-tighter uppercase mb-4"
+        >
+          Frequently Asked Questions
+        </h3>
+        <div class="h-1 w-20 bg-primary"></div>
+      </div>
+      <button
+        id="expand-all"
+        class="font-mono text-[10px] font-bold uppercase tracking-widest text-secondary/60 hover:text-primary transition-colors border-b border-secondary/20 pb-1"
+      >
+        Expand All [+]
+      </button>
+    </div>
+
+    <div class="space-y-4" id="faq-accordion">
+      <!-- FAQ 1 -->
+      <div
+        class="border-2 border-secondary overflow-hidden faq-item"
+        data-open="true"
+      >
+        <button
+          class="w-full flex justify-between items-center p-6 text-left hover:bg-bg-main transition-colors group faq-trigger"
+        >
+          <h4
+            class="font-mono font-bold text-secondary uppercase tracking-tight"
+          >
+            Is this escrow?
+          </h4>
+          <div
+            class="w-6 h-6 border border-secondary flex items-center justify-center group-hover:border-primary transition-colors"
+          >
+            <span class="faq-icon font-bold">-</span>
+          </div>
+        </button>
+        <div class="faq-content px-6 pb-6">
+          <p
+            class="font-mono text-xs text-secondary/70 leading-relaxed uppercase"
+          >
+            No. Frontpanda triggers direct billing via Stripe. We enforce the
+            decision gate, but the funds flow directly from your client to you.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div
+        class="border-2 border-secondary overflow-hidden faq-item"
+        data-open="true"
+      >
+        <button
+          class="w-full flex justify-between items-center p-6 text-left hover:bg-bg-main transition-colors group faq-trigger"
+        >
+          <h4
+            class="font-mono font-bold text-secondary uppercase tracking-tight"
+          >
+            What happens if the client disputes?
+          </h4>
+          <div
+            class="w-6 h-6 border border-secondary flex items-center justify-center group-hover:border-primary transition-colors"
+          >
+            <span class="faq-icon font-bold">-</span>
+          </div>
+        </button>
+        <div class="faq-content px-6 pb-6">
+          <p
+            class="font-mono text-xs text-secondary/70 leading-relaxed uppercase"
+          >
+            Every decision is logged in the Audit Trail. If a client requests a
+            change after approval, it is treated as a new priced change order.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div
+        class="border-2 border-secondary overflow-hidden faq-item"
+        data-open="false"
+      >
+        <button
+          class="w-full flex justify-between items-center p-6 text-left hover:bg-bg-main transition-colors group faq-trigger"
+        >
+          <h4
+            class="font-mono font-bold text-secondary uppercase tracking-tight"
+          >
+            Can clients pay by bank transfer?
+          </h4>
+          <div
+            class="w-6 h-6 border border-secondary flex items-center justify-center group-hover:border-primary transition-colors"
+          >
+            <span class="faq-icon font-bold">+</span>
+          </div>
+        </button>
+        <div class="faq-content px-6 pb-6 hidden">
+          <p
+            class="font-mono text-xs text-secondary/70 leading-relaxed uppercase"
+          >
+            Yes. While Stripe triggers are automatic, you can manually mark
+            milestones as paid if you receive funds via SEPA/SWIFT.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div
+        class="border-2 border-secondary overflow-hidden faq-item"
+        data-open="false"
+      >
+        <button
+          class="w-full flex justify-between items-center p-6 text-left hover:bg-bg-main transition-colors group faq-trigger"
+        >
+          <h4
+            class="font-mono font-bold text-secondary uppercase tracking-tight"
+          >
+            Does this replace our contract?
+          </h4>
+          <div
+            class="w-6 h-6 border border-secondary flex items-center justify-center group-hover:border-primary transition-colors"
+          >
+            <span class="faq-icon font-bold">+</span>
+          </div>
+        </button>
+        <div class="faq-content px-6 pb-6 hidden">
+          <p
+            class="font-mono text-xs text-secondary/70 leading-relaxed uppercase"
+          >
+            No. Frontpanda is the enforcement layer for your existing contract's
+            milestone and change request clauses.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div
+        class="border-2 border-secondary overflow-hidden faq-item"
+        data-open="false"
+      >
+        <button
+          class="w-full flex justify-between items-center p-6 text-left hover:bg-bg-main transition-colors group faq-trigger"
+        >
+          <h4
+            class="font-mono font-bold text-secondary uppercase tracking-tight"
+          >
+            Do you store source code?
+          </h4>
+          <div
+            class="w-6 h-6 border border-secondary flex items-center justify-center group-hover:border-primary transition-colors"
+          >
+            <span class="faq-icon font-bold">+</span>
+          </div>
+        </button>
+        <div class="faq-content px-6 pb-6 hidden">
+          <p
+            class="font-mono text-xs text-secondary/70 leading-relaxed uppercase"
+          >
+            Never. We only manage the decision gates and access triggers (like
+            GitHub team invites). Your IP stays where it belongs.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 6 -->
+      <div
+        class="border-2 border-secondary overflow-hidden faq-item"
+        data-open="false"
+      >
+        <button
+          class="w-full flex justify-between items-center p-6 text-left hover:bg-bg-main transition-colors group faq-trigger"
+        >
+          <h4
+            class="font-mono font-bold text-secondary uppercase tracking-tight"
+          >
+            What exactly gets blocked?
+          </h4>
+          <div
+            class="w-6 h-6 border border-secondary flex items-center justify-center group-hover:border-primary transition-colors"
+          >
+            <span class="faq-icon font-bold">+</span>
+          </div>
+        </button>
+        <div class="faq-content px-6 pb-6 hidden">
+          <p
+            class="font-mono text-xs text-secondary/70 leading-relaxed uppercase"
+          >
+            If a decision is pending, the milestone is marked "Awaiting client
+            approval". This provides the professional clarity to focus on other
+            tasks until a decision is made.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 7 -->
+      <div
+        class="border-2 border-secondary overflow-hidden faq-item"
+        data-open="false"
+      >
+        <button
+          class="w-full flex justify-between items-center p-6 text-left hover:bg-bg-main transition-colors group faq-trigger"
+        >
+          <h4
+            class="font-mono font-bold text-secondary uppercase tracking-tight"
+          >
+            Is this for hourly/retainer work?
+          </h4>
+          <div
+            class="w-6 h-6 border border-secondary flex items-center justify-center group-hover:border-primary transition-colors"
+          >
+            <span class="faq-icon font-bold">+</span>
+          </div>
+        </button>
+        <div class="faq-content px-6 pb-6 hidden">
+          <p
+            class="font-mono text-xs text-secondary/70 leading-relaxed uppercase"
+          >
+            Best for fixed-price or milestone-based projects; retainer can use
+            it only if you define milestones.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-bg-main py-24 border-b border-border-main" id="pilot-intake">
+  <div class="container mx-auto max-w-4xl px-6 text-center">
+    <div class="mb-12">
+      <h3
+        class="text-4xl font-black text-secondary tracking-tighter uppercase mb-4"
+      >
+        Pilot Intake: Open
+      </h3>
+      <div class="h-1 w-20 bg-primary mx-auto"></div>
+    </div>
+
+    <div
+      class="border-2 border-secondary bg-[#f0f0ee] p-1 md:p-2 relative overflow-hidden text-left"
+    >
+      <div class="border border-secondary/20 p-8 md:p-12">
+        <div class="grid lg:grid-cols-2 gap-12 items-start">
+          <div>
+            <div class="mb-8">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-4 h-4 bg-primary animate-pulse"></div>
+                <h4
+                  class="text-xl font-black text-secondary tracking-tighter uppercase font-mono"
+                >
+                  Founder Benefits
+                </h4>
+              </div>
+              <ul class="space-y-4">
+                <li
+                  class="flex items-start gap-3 font-mono text-xs uppercase font-bold text-secondary"
+                >
+                  <span class="text-primary tracking-tighter">[LVL_1]</span>
+                  <span>Lifetime discount (pilot cohort)</span>
+                </li>
+                <li
+                  class="flex items-start gap-3 font-mono text-xs uppercase font-bold text-secondary"
+                >
+                  <span class="text-primary tracking-tighter">[LVL_2]</span>
+                  <span>Roadmap voting on enforcement rules</span>
+                </li>
+                <li
+                  class="flex items-start gap-3 font-mono text-xs uppercase font-bold text-secondary"
+                >
+                  <span class="text-primary tracking-tighter">[LVL_3]</span>
+                  <span>Assisted setup</span>
+                </li>
+              </ul>
+            </div>
+            <p
+              class="font-mono text-[11px] text-secondary/60 leading-relaxed uppercase border-l border-primary/30 pl-3"
+            >
+              We’re onboarding a small number of EU agencies to shape the
+              enforcement rules and exports.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-6">
+            <div class="space-y-4">
+              <div class="flex items-center gap-2">
+                <div class="w-2 h-2 bg-primary"></div>
+                <span
+                  class="font-mono text-[10px] font-bold uppercase tracking-widest text-secondary"
+                  >No credit card required</span
+                >
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="w-2 h-2 bg-primary"></div>
+                <span
+                  class="font-mono text-[10px] font-bold uppercase tracking-widest text-secondary"
+                  >2–3 minute application</span
+                >
+              </div>
+            </div>
+
+            <button
+              id="pricing-cta"
+              class="w-full bg-secondary text-white py-6 px-8 font-mono font-bold text-lg border border-secondary shadow-[6px_6px_0px_0px_rgba(16,90,56,1)] hover:bg-primary transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none uppercase"
+            >
+              Apply for Pilot Access
+            </button>
+
+            <p
+              class="font-mono text-[10px] text-center text-secondary/40 uppercase tracking-widest"
+            >
+              Limited pilot slots
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="bg-secondary text-white pt-16 pb-12">
+  <div class="container mx-auto max-w-[1400px] px-6">
+    <div class="grid gap-12 lg:grid-cols-4 border-b border-white/10 pb-12">
+      <div class="col-span-1 lg:col-span-1">
+        <div class="flex items-center gap-2 mb-4">
+          <Image src={frontpanda} alt="Frontpanda" class="h-6 w-auto brightness-0 invert" />
+        </div>
+        <p class="font-mono text-xs text-gray-400 mb-6 max-w-[200px]">
+          Decision enforcement for 1–10 person B2B software agencies.
+        </p>
+      </div>
+      <div class="col-span-1">
+        <h4
+          class="font-mono font-bold text-primary mb-4 text-xs uppercase tracking-widest"
+        >
+          Protocol
+        </h4>
+        <ul class="space-y-2 text-sm font-mono text-gray-400">
+          <li>
+            <a
+              class="hover:text-white hover:underline decoration-primary decoration-2 underline-offset-4"
+              href="#protocol">Features</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-white hover:underline decoration-primary decoration-2 underline-offset-4"
+              href="#pricing">Pricing</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-span-1">
+        <h4
+          class="font-mono font-bold text-primary mb-4 text-xs uppercase tracking-widest"
+        >
+          Founder Portal
+        </h4>
+        <ul class="space-y-2 text-sm font-mono text-gray-400">
+          <li>
+            <a
+              id="footer-cta"
+              class="hover:text-white hover:underline decoration-primary decoration-2 underline-offset-4"
+              href="#">Apply for Pilot Access</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-white hover:underline decoration-primary decoration-2 underline-offset-4"
+              href="#">Early Access</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-span-1">
+        <h4
+          class="font-mono font-bold text-primary mb-4 text-xs uppercase tracking-widest"
+        >
+          Legal
+        </h4>
+        <ul class="space-y-2 text-sm font-mono text-gray-400">
+          <li>
+            <a
+              class="hover:text-white hover:underline decoration-primary decoration-2 underline-offset-4"
+              href="#">Terms of Service</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="mt-8 flex flex-col md:flex-row justify-between items-center text-xs font-mono text-gray-500"
+    >
+      <div>© 2026 Frontpanda. Market Validation Cycle Alpha-01.</div>
+      <div class="mt-4 md:mt-0 flex gap-4"></div>
+    </div>
+  </div>
+</footer>
+
+<!-- Pilot Intake Modal -->
+<div
+  id="intake-modal"
+  class="fixed inset-0 z-[100] hidden items-center justify-center p-4"
+>
+  <div
+    class="absolute inset-0 bg-secondary/80 backdrop-blur-sm"
+    id="modal-overlay"
+  >
+  </div>
+  <div
+    class="relative w-full max-w-lg bg-white border-2 border-secondary shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] font-mono overflow-hidden"
+  >
+    <!-- Modal Header -->
+    <div
+      class="border-b-2 border-secondary p-6 flex justify-between items-center bg-[#e2e2df]"
+    >
+      <h3 class="text-lg font-bold uppercase tracking-tighter text-secondary">
+        Pilot_Access_Application
+      </h3>
+      <button
+        id="close-modal"
+        class="text-secondary hover:text-primary transition-colors"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg
+        >
+      </button>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="h-1 w-full bg-secondary/10 relative">
+      <div
+        id="modal-progress"
+        class="absolute inset-y-0 left-0 w-1/3 bg-primary transition-all duration-300"
+      >
+      </div>
+    </div>
+
+    <!-- Form Steps -->
+    <div class="p-8">
+      <!-- Step 1 -->
+      <div id="step-1" class="space-y-6">
+        <div class="space-y-2">
+          <label
+            class="block text-[10px] font-bold uppercase tracking-widest text-secondary/60"
+            >Email Address</label
+          >
+          <input
+            type="email"
+            id="modal-email"
+            class="w-full bg-bg-main border-2 border-secondary/20 p-4 focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all font-bold text-secondary"
+            placeholder="founder@agency.com"
+          />
+          <p
+            id="email-error"
+            class="hidden text-[10px] font-bold text-red-600 uppercase tracking-tighter"
+          >
+            Please enter a valid email
+          </p>
+        </div>
+        <div class="space-y-2">
+          <label
+            class="block text-[10px] font-bold uppercase tracking-widest text-secondary/60"
+            >Agency Size</label
+          >
+          <div class="relative">
+            <select
+              id="modal-agency-size"
+              class="w-full bg-bg-main border-2 border-secondary/20 p-4 focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all font-bold text-secondary appearance-none cursor-pointer"
+            >
+              <option value="">Select size...</option>
+              <option value="1-3">1-3 people</option>
+              <option value="4-10">4-10 people</option>
+              <option value="10+">10+ people</option>
+            </select>
+            <div
+              class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-secondary/40"><path d="m6 9 6 6 6-6"></path></svg
+              >
+            </div>
+          </div>
+          <p
+            id="size-error"
+            class="hidden text-[10px] font-bold text-red-600 uppercase tracking-tighter"
+          >
+            Please select your agency size
+          </p>
+        </div>
+        <button
+          id="next-step"
+          class="w-full bg-primary text-white py-4 font-bold uppercase border-2 border-primary hover:bg-primary-dark transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
+        >
+          Next: Agency Details
+        </button>
+      </div>
+
+      <!-- Step 2 -->
+      <div id="step-2" class="hidden space-y-6">
+        <div class="space-y-2">
+          <label
+            class="block text-[10px] font-bold uppercase tracking-widest text-secondary/60"
+            >Country</label
+          >
+          <input
+            type="text"
+            id="modal-country"
+            class="w-full bg-bg-main border-2 border-secondary/20 p-4 focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all font-bold text-secondary"
+            placeholder="e.g. Germany"
+          />
+          <p
+            id="country-error"
+            class="hidden text-[10px] font-bold text-red-600 uppercase tracking-tighter"
+          >
+            Please enter your country
+          </p>
+        </div>
+        <div class="space-y-2">
+          <label
+            class="block text-[10px] font-bold uppercase tracking-widest text-secondary/60"
+            >Typical Project Size</label
+          >
+          <div class="relative">
+            <select
+              id="modal-project-size"
+              class="w-full bg-bg-main border-2 border-secondary/20 p-4 focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all font-bold text-secondary appearance-none cursor-pointer"
+            >
+              <option value="">Select size...</option>
+              <option value="<5k">Below €5,000</option>
+              <option value="5k-20k">€5,000 - €20,000</option>
+              <option value="20k-50k">€20,000 - €50,000</option>
+              <option value="50k+">€50,000+</option>
+            </select>
+            <div
+              class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-secondary/40"><path d="m6 9 6 6 6-6"></path></svg
+              >
+            </div>
+          </div>
+          <p
+            id="project-error"
+            class="hidden text-[10px] font-bold text-red-600 uppercase tracking-tighter"
+          >
+            Please select project size
+          </p>
+        </div>
+        <div class="flex gap-4">
+          <button
+            id="prev-step"
+            class="flex-1 bg-white text-secondary py-4 font-bold uppercase border-2 border-secondary hover:bg-bg-main transition-all"
+          >
+            Back
+          </button>
+          <button
+            id="submit-step-2"
+            class="flex-[2] bg-primary text-white py-4 font-bold uppercase border-2 border-primary hover:bg-primary-dark transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
+          >
+            Next: Pricing Check
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 3: Pricing Feedback -->
+      <div id="step-3" class="hidden space-y-6">
+        <div
+          id="pricing-feedback-section"
+          class="border-2 border-secondary/10 p-6 space-y-4 bg-bg-main/50 text-left"
+        >
+          <div class="space-y-1">
+            <label
+              class="block text-[10px] font-bold uppercase tracking-widest text-secondary/60"
+            >
+              Quick pricing check
+            </label>
+            <p
+              class="text-xs font-bold text-secondary uppercase tracking-tighter"
+            >
+              Core €39/mo, Agency €69/mo. Is that…
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2">
+            <button
+              class="pricing-opt border-2 border-secondary/20 p-2 text-[10px] font-bold uppercase hover:border-primary hover:text-primary transition-all bg-white"
+              data-value="too-high">Too high</button
+            >
+            <button
+              class="pricing-opt border-2 border-secondary/20 p-2 text-[10px] font-bold uppercase hover:border-primary hover:text-primary transition-all bg-white"
+              data-value="about-right">About right</button
+            >
+            <button
+              class="pricing-opt border-2 border-secondary/20 p-2 text-[10px] font-bold uppercase hover:border-primary hover:text-primary transition-all bg-white"
+              data-value="too-low">Too low</button
+            >
+            <button
+              class="pricing-opt border-2 border-secondary/20 p-2 text-[10px] font-bold uppercase hover:border-primary hover:text-primary transition-all bg-white"
+              data-value="not-sure">Not sure yet</button
+            >
+          </div>
+
+          <div class="space-y-2">
+            <textarea
+              id="pricing-why"
+              rows="2"
+              class="w-full bg-white border-2 border-secondary/20 p-3 focus:border-primary focus:outline-none text-[10px] font-bold text-secondary placeholder:text-secondary/30"
+              placeholder="WHY?"></textarea>
+          </div>
+          <p
+            id="pricing-error"
+            class="hidden text-[10px] font-bold text-red-600 uppercase tracking-tighter"
+          >
+            Please select a pricing feedback option
+          </p>
+        </div>
+
+        <div class="flex gap-4">
+          <button
+            id="prev-step-3"
+            class="flex-1 bg-white text-secondary py-4 font-bold uppercase border-2 border-secondary hover:bg-bg-main transition-all"
+          >
+            Back
+          </button>
+          <button
+            id="submit-form"
+            class="flex-[2] bg-primary text-white py-4 font-bold uppercase border-2 border-primary hover:bg-primary-dark transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
+          >
+            Submit Application
+          </button>
+        </div>
+      </div>
+
+      <!-- Success State -->
+      <div id="step-success" class="hidden text-center py-8 space-y-8">
+        <div class="flex justify-center">
+          <Image src={frontpanda} alt="Frontpanda" class="h-8 w-auto opacity-50 grayscale" />
+        </div>
+        <div class="space-y-4 mt-8">
+          
+          <div class="space-y-2">
+            <h4
+              class="text-xl font-black text-secondary tracking-tighter uppercase leading-tight"
+            >
+              Thanks — You’re on the pilot waitlist.
+            </h4>
+            <p
+              class="text-[10px] font-bold text-secondary/60 uppercase tracking-widest"
+            >
+              We’ll email you when a pilot spot opens.
+            </p>
+          </div>
+          <p
+            class="text-[9px] text-secondary/40 uppercase tracking-tight max-w-xs mx-auto"
+          >
+            We’ll also send short product updates to subscribed agencies
+            (1–2/month). No spam.
+          </p>
+        </div>
+
+        <button
+          id="close-success"
+          class="w-full bg-primary text-white py-4 font-bold uppercase border-2 border-primary hover:bg-primary-dark transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
+        >
+          Done
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById("intake-modal");
+  const overlay = document.getElementById("modal-overlay");
+  const closeBtn = document.getElementById("close-modal");
+  const nextBtn = document.getElementById("next-step");
+  const prevBtn = document.getElementById("prev-step");
+  const submitStep2Btn = document.getElementById("submit-step-2");
+  const prevStep3Btn = document.getElementById("prev-step-3");
+  const submitBtn = document.getElementById("submit-form");
+  const closeSuccessBtn = document.getElementById("close-success");
+
+  const step1 = document.getElementById("step-1");
+  const step2 = document.getElementById("step-2");
+  const step3 = document.getElementById("step-3");
+  const stepSuccess = document.getElementById("step-success");
+  const progress = document.getElementById("modal-progress");
+  let selectedPricingValue = "";
+
+  const openModal = () => {
+    if (modal) {
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeModal = () => {
+    if (modal) {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+    document.body.style.overflow = "";
+    // Reset steps
+    if (step1 && step2 && step3 && stepSuccess && progress) {
+      step1.classList.remove("hidden");
+      step2.classList.add("hidden");
+      step3.classList.add("hidden");
+      stepSuccess.classList.add("hidden");
+      progress.style.width = "25%";
+
+      // Reset pricing state
+      selectedPricingValue = "";
+      const pricingOpts = document.querySelectorAll(".pricing-opt");
+      pricingOpts.forEach((o) => {
+        o.classList.remove("border-primary", "text-primary", "bg-primary/5");
+        o.classList.add("border-secondary/20", "bg-white");
+      });
+      document.getElementById("pricing-error")?.classList.add("hidden");
+    }
+  };
+
+  const attachFeedbackListeners = () => {
+    const pricingOpts = document.querySelectorAll(".pricing-opt");
+    const pricingError = document.getElementById("pricing-error");
+
+    pricingOpts.forEach((opt) => {
+      opt.addEventListener("click", () => {
+        pricingOpts.forEach((o) => {
+          o.classList.remove("border-primary", "text-primary", "bg-primary/5");
+          o.classList.add("border-secondary/20", "bg-white");
+        });
+        opt.classList.add("border-primary", "text-primary", "bg-primary/5");
+        opt.classList.remove("border-secondary/20", "bg-white");
+        selectedPricingValue = opt.getAttribute("data-value") || "";
+        pricingError?.classList.add("hidden");
+      });
+    });
+  };
+
+  attachFeedbackListeners();
+
+  // Attach to all CTA buttons
+  const ctaButtons = ["hero-cta", "header-cta", "pricing-cta", "footer-cta"];
+
+  ctaButtons.forEach((id) => {
+    const btn = document.getElementById(id);
+    if (btn) btn.addEventListener("click", openModal);
+  });
+
+  if (overlay) overlay.addEventListener("click", closeModal);
+  if (closeBtn) closeBtn.addEventListener("click", closeModal);
+  if (closeSuccessBtn) closeSuccessBtn.addEventListener("click", closeModal);
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      const emailInput = document.getElementById(
+        "modal-email",
+      ) as HTMLInputElement | null;
+      const sizeInput = document.getElementById(
+        "modal-agency-size",
+      ) as HTMLSelectElement | null;
+      const emailError = document.getElementById("email-error");
+      const sizeError = document.getElementById("size-error");
+
+      const email = emailInput?.value;
+      const size = sizeInput?.value;
+      const isEmailValid = email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+      let hasError = false;
+
+      if (!isEmailValid) {
+        emailInput?.classList.add(
+          "border-red-600",
+          "ring-2",
+          "ring-red-600/20",
+        );
+        emailError?.classList.remove("hidden");
+        hasError = true;
+      } else {
+        emailInput?.classList.remove(
+          "border-red-600",
+          "ring-2",
+          "ring-red-600/20",
+        );
+        emailError?.classList.add("hidden");
+      }
+
+      if (!size) {
+        sizeInput?.classList.add("border-red-600", "ring-2", "ring-red-600/20");
+        sizeError?.classList.remove("hidden");
+        hasError = true;
+      } else {
+        sizeInput?.classList.remove(
+          "border-red-600",
+          "ring-2",
+          "ring-red-600/20",
+        );
+        sizeError?.classList.add("hidden");
+      }
+
+      if (!hasError && step1 && step2 && progress) {
+        step1.classList.add("hidden");
+        step2.classList.remove("hidden");
+        progress.style.width = "50%";
+      }
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      if (step1 && step2 && progress) {
+        step2.classList.add("hidden");
+        step1.classList.remove("hidden");
+        progress.style.width = "25%";
+      }
+    });
+  }
+
+  if (submitStep2Btn) {
+    submitStep2Btn.addEventListener("click", () => {
+      const countryInput = document.getElementById(
+        "modal-country",
+      ) as HTMLInputElement | null;
+      const sizeInput = document.getElementById(
+        "modal-project-size",
+      ) as HTMLSelectElement | null;
+      const countryError = document.getElementById("country-error");
+      const projectError = document.getElementById("project-error");
+
+      const country = countryInput?.value;
+      const size = sizeInput?.value;
+
+      let hasError = false;
+
+      if (!country) {
+        countryInput?.classList.add(
+          "border-red-600",
+          "ring-2",
+          "ring-red-600/20",
+        );
+        countryError?.classList.remove("hidden");
+        hasError = true;
+      } else {
+        countryInput?.classList.remove(
+          "border-red-600",
+          "ring-2",
+          "ring-red-600/20",
+        );
+        countryError?.classList.add("hidden");
+      }
+
+      if (!size) {
+        sizeInput?.classList.add("border-red-600", "ring-2", "ring-red-600/20");
+        projectError?.classList.remove("hidden");
+        hasError = true;
+      } else {
+        sizeInput?.classList.remove(
+          "border-red-600",
+          "ring-2",
+          "ring-red-600/20",
+        );
+        projectError?.classList.add("hidden");
+      }
+
+      if (!hasError && step2 && step3 && progress) {
+        step2.classList.add("hidden");
+        step3.classList.remove("hidden");
+        progress.style.width = "75%";
+      }
+    });
+  }
+
+  if (prevStep3Btn) {
+    prevStep3Btn.addEventListener("click", () => {
+      if (step2 && step3 && progress) {
+        step3.classList.add("hidden");
+        step2.classList.remove("hidden");
+        progress.style.width = "50%";
+      }
+    });
+  }
+
+  if (submitBtn) {
+    submitBtn.addEventListener("click", () => {
+      const pricingError = document.getElementById("pricing-error");
+
+      if (!selectedPricingValue) {
+        pricingError?.classList.remove("hidden");
+        return;
+      }
+
+      if (step3 && stepSuccess && progress) {
+        step3.classList.add("hidden");
+        stepSuccess.classList.remove("hidden");
+        progress.style.width = "100%";
+      }
+    });
+  }
+
+  // Hero Tab Logic
+  const tabABtn = document.getElementById("tab-a-btn");
+  const tabBBtn = document.getElementById("tab-b-btn");
+  const tabCBtn = document.getElementById("tab-c-btn");
+  const tabAContent = document.getElementById("tab-a-content");
+  const tabBContent = document.getElementById("tab-b-content");
+  const tabCContent = document.getElementById("tab-c-content");
+
+  const switchTab = (activeTab: "A" | "B" | "C") => {
+    [tabABtn, tabBBtn, tabCBtn].forEach((btn) => {
+      btn?.classList.remove("bg-white", "text-primary");
+      btn?.classList.add("text-secondary/60", "hover:bg-white/80");
+    });
+    [tabAContent, tabBContent, tabCContent].forEach((content) =>
+      content?.classList.add("hidden"),
+    );
+
+    if (activeTab === "A") {
+      tabABtn?.classList.add("bg-white", "text-primary");
+      tabABtn?.classList.remove("text-secondary/60", "hover:bg-white/80");
+      tabAContent?.classList.remove("hidden");
+    } else if (activeTab === "B") {
+      tabBBtn?.classList.add("bg-white", "text-primary");
+      tabBBtn?.classList.remove("text-secondary/60", "hover:bg-white/80");
+      tabBContent?.classList.remove("hidden");
+    } else if (activeTab === "C") {
+      tabCBtn?.classList.add("bg-white", "text-primary");
+      tabCBtn?.classList.remove("text-secondary/60", "hover:bg-white/80");
+      tabCContent?.classList.remove("hidden");
+    }
+  };
+
+  tabABtn?.addEventListener("click", () => switchTab("A"));
+  tabBBtn?.addEventListener("click", () => switchTab("B"));
+  tabCBtn?.addEventListener("click", () => switchTab("C"));
+
+  // FAQ Accordion Logic
+  const faqItems = document.querySelectorAll(".faq-item");
+  const expandAllBtn = document.getElementById("expand-all");
+
+  faqItems.forEach((item) => {
+    const trigger = item.querySelector(".faq-trigger");
+    const content = item.querySelector(".faq-content");
+    const icon = item.querySelector(".faq-icon");
+
+    trigger?.addEventListener("click", () => {
+      const isOpen = item.getAttribute("data-open") === "true";
+
+      if (isOpen) {
+        item.setAttribute("data-open", "false");
+        content?.classList.add("hidden");
+        if (icon) icon.textContent = "+";
+      } else {
+        item.setAttribute("data-open", "true");
+        content?.classList.remove("hidden");
+        if (icon) icon.textContent = "-";
+      }
+    });
+  });
+
+  if (expandAllBtn) {
+    expandAllBtn.addEventListener("click", () => {
+      const isExpand = expandAllBtn.textContent?.includes("Expand All");
+
+      faqItems.forEach((item) => {
+        const content = item.querySelector(".faq-content");
+        const icon = item.querySelector(".faq-icon");
+
+        if (isExpand) {
+          item.setAttribute("data-open", "true");
+          content?.classList.remove("hidden");
+          if (icon) icon.textContent = "-";
+        } else {
+          item.setAttribute("data-open", "false");
+          content?.classList.add("hidden");
+          if (icon) icon.textContent = "+";
+        }
+      });
+
+      expandAllBtn.textContent = isExpand
+        ? "Collapse All [-]"
+        : "Expand All [+]";
+    });
+  }
+</script>
