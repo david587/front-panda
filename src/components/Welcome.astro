@@ -1608,6 +1608,12 @@ import mini from "../assets/mini.png";
             Submit Application
           </button>
         </div>
+        <p
+          id="submit-error"
+          class="hidden text-[10px] font-bold text-red-600 uppercase tracking-tighter"
+        >
+          Something went wrong. Please try again.
+        </p>
       </div>
 
       <!-- Success State -->
@@ -1656,8 +1662,9 @@ import mini from "../assets/mini.png";
   const prevBtn = document.getElementById("prev-step");
   const submitStep2Btn = document.getElementById("submit-step-2");
   const prevStep3Btn = document.getElementById("prev-step-3");
-  const submitBtn = document.getElementById("submit-form");
+  const submitBtn = document.getElementById("submit-form") as HTMLButtonElement;
   const closeSuccessBtn = document.getElementById("close-success");
+  const submitError = document.getElementById("submit-error");
 
   const step1 = document.getElementById("step-1");
   const step2 = document.getElementById("step-2");
@@ -1688,6 +1695,8 @@ import mini from "../assets/mini.png";
       stepSuccess.classList.add("hidden");
       progress.style.width = "25%";
 
+      submitError?.classList.add("hidden");
+
       // Reset pricing state
       selectedPricingValue = "";
       const pricingOpts = document.querySelectorAll(".pricing-opt");
@@ -1696,6 +1705,24 @@ import mini from "../assets/mini.png";
         o.classList.add("border-secondary/20", "bg-white");
       });
       document.getElementById("pricing-error")?.classList.add("hidden");
+    }
+  };
+
+  const setSubmitState = (isSubmitting: boolean) => {
+    if (!submitBtn) return;
+
+    const button = submitBtn;
+    if (isSubmitting) {
+      if (!button.dataset.label) {
+        button.dataset.label = button.textContent || "";
+      }
+      button.textContent = "Submitting...";
+      button.setAttribute("disabled", "true");
+      button.classList.add("opacity-70", "cursor-not-allowed");
+    } else {
+      button.textContent = button.dataset.label || "Submit Application";
+      button.removeAttribute("disabled");
+      button.classList.remove("opacity-70", "cursor-not-allowed");
     }
   };
 
@@ -1735,10 +1762,10 @@ import mini from "../assets/mini.png";
     nextBtn.addEventListener("click", () => {
       const emailInput = document.getElementById(
         "modal-email",
-      ) as HTMLInputElement | null;
+      ) as HTMLInputElement;
       const sizeInput = document.getElementById(
         "modal-agency-size",
-      ) as HTMLSelectElement | null;
+      ) as HTMLSelectElement;
       const emailError = document.getElementById("email-error");
       const sizeError = document.getElementById("size-error");
 
@@ -1800,10 +1827,10 @@ import mini from "../assets/mini.png";
     submitStep2Btn.addEventListener("click", () => {
       const countryInput = document.getElementById(
         "modal-country",
-      ) as HTMLInputElement | null;
+      ) as HTMLSelectElement;
       const sizeInput = document.getElementById(
         "modal-project-size",
-      ) as HTMLSelectElement | null;
+      ) as HTMLSelectElement;
       const countryError = document.getElementById("country-error");
       const projectError = document.getElementById("project-error");
 
@@ -1861,18 +1888,67 @@ import mini from "../assets/mini.png";
   }
 
   if (submitBtn) {
-    submitBtn.addEventListener("click", () => {
+    submitBtn.addEventListener("click", async () => {
       const pricingError = document.getElementById("pricing-error");
+      submitError?.classList.add("hidden");
 
       if (!selectedPricingValue) {
         pricingError?.classList.remove("hidden");
         return;
       }
 
-      if (step3 && stepSuccess && progress) {
-        step3.classList.add("hidden");
-        stepSuccess.classList.remove("hidden");
-        progress.style.width = "100%";
+      const emailInput = document.getElementById(
+        "modal-email",
+      ) as HTMLInputElement;
+      const agencySizeInput = document.getElementById(
+        "modal-agency-size",
+      ) as HTMLSelectElement;
+      const countryInput = document.getElementById(
+        "modal-country",
+      ) as HTMLSelectElement;
+      const projectSizeInput = document.getElementById(
+        "modal-project-size",
+      ) as HTMLSelectElement;
+      const pricingWhyInput = document.getElementById(
+        "pricing-why",
+      ) as HTMLTextAreaElement;
+
+      const payload = {
+        email: emailInput?.value || "",
+        agencySize: agencySizeInput?.value || "",
+        country: countryInput?.value || "",
+        projectSize: projectSizeInput?.value || "",
+        pricingFeedback: selectedPricingValue,
+        pricingWhy: pricingWhyInput?.value || "",
+      };
+
+      setSubmitState(true);
+
+      try {
+        const response = await fetch("/api/pilot-intake", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          console.error("Server error:", errorData);
+          throw new Error(errorData.error || "Email send failed");
+        }
+
+        if (step3 && stepSuccess && progress) {
+          step3.classList.add("hidden");
+          stepSuccess.classList.remove("hidden");
+          progress.style.width = "100%";
+        }
+      } catch (err) {
+        console.error("Resend error:", err);
+        submitError?.classList.remove("hidden");
+      } finally {
+        setSubmitState(false);
       }
     });
   }
@@ -1885,7 +1961,7 @@ import mini from "../assets/mini.png";
   const tabBContent = document.getElementById("tab-b-content");
   const tabCContent = document.getElementById("tab-c-content");
 
-  const switchTab = (activeTab: "A" | "B" | "C") => {
+  const switchTab = (activeTab: string) => {
     [tabABtn, tabBBtn, tabCBtn].forEach((btn) => {
       btn?.classList.remove("bg-white", "text-primary");
       btn?.classList.add("text-secondary/60", "hover:bg-white/80");
